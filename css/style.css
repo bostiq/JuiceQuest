@@ -379,8 +379,8 @@ et_pb_accordion.x-toggle .et_pb_toggle_title {
 }
 @media screen and (max-width: 767px) {
   body.woocommerce #main-content .x-sec .et_pb_row {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-left: 2% !important;
+    padding-right: 2% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
     width: 100% !important;
