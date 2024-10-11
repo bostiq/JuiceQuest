@@ -105,6 +105,14 @@ function login_extra_note() {
 
 // Enqueue Index Styles
 
+function index_styles() {
+  wp_enqueue_style( 'index-styles-2024', get_stylesheet_directory_uri() . '/css/style.min.css' );
+  // wp_enqueue_style( 'custom-fonts', 'https://indexwebmedia.com/bostiq/commons/font-awesome-4.7.0/css/font-awesome.min.css' );
+  // wp_enqueue_style( 'custom-login-style', 'https://indexwebmedia.com/bostiq/commons/wp-login/login-index.min.css' );
+}
+add_action( 'wp_enqueue_scripts', 'index_styles' );
+
+
 // function index_styles() {
 
 //   $parent_style = 'Divi';
