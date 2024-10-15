@@ -60,15 +60,38 @@
    .
    . === WOO My Account ==->
    .
+/* . Readjust Accunt menu
+   . and Welcome message
+   . 
    .
-.woocommerce
-  .woocommerce-MyAccount-navigation
-    float: left
-    width: 30%
+      
+@media only screen and (min-width: 981px)
+  .woocommerce
+    .woocommerce-MyAccount-navigation
+      float: left
+      width: 30%
+  
+    .woocommerce-MyAccount-content
+      float: right
+      width: 68%
 
-  .woocommerce-MyAccount-content
-    float: right
-    width: 68%
+@media only screen and (max-width: 980px)
+  .woocommerce
+    .woocommerce-MyAccount-navigation, .woocommerce-MyAccount-content
+      float: none !important
+      width: 100% !important
+
+    .woocommerce-MyAccount-navigation
+      ul
+        padding: 20px 0 0px 0em
+
+@media only screen and (max-width: 767px)
+  .x-sec
+    .et_pb_column_4_4
+      .et_pb_module .woocommerce
+        display: flex
+        flex-direction: column-reverse
+
 
 .et_pb_text_inner .woocommerce-MyAccount-navigation li
   list-style: none
