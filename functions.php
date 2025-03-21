@@ -107,27 +107,19 @@ function login_extra_note() {
 
 function index_styles() {
   wp_enqueue_style( 'index-styles-2024', get_stylesheet_directory_uri() . '/css/style.min.css' );
-  // wp_enqueue_style( 'custom-fonts', 'https://indexwebmedia.com/bostiq/commons/font-awesome-4.7.0/css/font-awesome.min.css' );
-  // wp_enqueue_style( 'custom-login-style', 'https://indexwebmedia.com/bostiq/commons/wp-login/login-index.min.css' );
 }
 add_action( 'wp_enqueue_scripts', 'index_styles' );
 
 
-// function index_styles() {
+// -----------------------------------------
+// FOOTER DELIVERY CHECK
+// -----------------------------------------
+add_action('get_footer', 'footer_delivery_check');
 
-//   $parent_style = 'Divi';
-
-//   //wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
-//   wp_enqueue_style( 'index-style',
-//       get_stylesheet_directory_uri() . '/index-jq-style.min.css',
-//       array( $parent_style ),
-//       wp_get_theme()->get('1.0.0')
-//   );
-// }
-// add_action( 'wp_enqueue_scripts', 'index_styles' );
-
-
-
-
-
-?>
+function footer_delivery_check() {
+  echo '<div id="x-footer">';
+  echo '<div class="x-text x-delivery-check et_pb_module et_pb_text et_pb_text_align_left et_pb_bg_layout_light">';
+	echo do_shortcode('[delivery_area_form]');
+	echo	'</div>';
+	echo	'</div>';
+}
