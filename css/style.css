@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Theme Name:  index-juicequest
  * Theme URI:   https://juicequest.com.au
@@ -7,32 +8,50 @@
  * Author URI:  https://juicequest.com.au
  * Template:    Divi */
 /*- Add any CSS custom code for this child theme below this line -  */
-/* .
- * .
- * . -== COLORS ==->
- * .
- * . */
-/* .
- * .
- * . -= IMAGES SETTINGS =-
- * .
- * . */
+/*! 
+ *  *#######*˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙*#######*
+ *  #@@@@@##*˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙*##@@@@@#
+ *  #@@@@˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙@@@@#
+ *  #@@@#˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙#@@@#
+ *  #@@@#˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙#@@@#
+ *  #@@@#˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙#@@@#
+ *  #@@@#˙˙˙˙˙˙˙˙˙˙*(##(˙˙˙˙˙˙˙˙(###(-˙˙˙˙˙˙˙˙˙#@@@#
+ *  #@@@#˙˙˙˙˙˙˙˙˙˙˙#@@@@]˙˙˙˙˙#@@@@]˙˙˙˙˙˙˙˙˙˙#@@@#
+ *  #@@@#˙˙˙˙˙˙˙˙˙˙˙˙#@@@@#˙˙]@@@@%˙˙˙˙˙˙˙˙˙˙˙˙#@@@#
+ *  #@@@#˙˙˙˙˙˙˙˙˙˙˙˙˙}@@@@@@@@@@#˙˙˙˙˙˙˙˙˙˙˙˙˙#@@@#
+ *  #@@@#˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙#@@@@@@@#˙˙˙˙˙˙˙˙˙˙˙˙˙˙#@@@#
+ *  #@@@#˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙@@@@@@@˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙#@@@#
+ *  #@@@#˙˙˙˙˙˙˙˙˙˙˙˙˙˙]@@@@@@@@#˙˙˙˙˙˙˙˙˙˙˙˙˙˙#@@@#
+ *  #@@@#˙˙˙˙˙˙˙˙˙˙˙˙˙#@@@@#%@@@@%˙˙˙˙˙˙˙˙˙˙˙˙˙#@@@#
+ *  #@@@#˙˙˙˙˙˙˙˙˙˙˙]@@@@#˙˙˙˙#@@@@]˙˙˙˙˙˙˙˙˙˙˙#@@@#
+ *  #@@@#˙˙˙˙˙˙˙˙˙˙#@@@@#˙˙˙˙˙˙]@@@@#˙˙˙˙˙˙˙˙˙˙#@@@#
+ *  #@@@#˙˙˙˙˙˙˙˙]@@@@@˙˙˙˙˙˙˙˙  #@@@@(˙˙˙˙˙˙˙˙#@@@#
+ *  #@@@#˙˙˙˙˙˙˙-]%%%]˙˙˙˙˙˙˙˙˙˙˙˙]%%%]-˙˙˙˙˙˙˙#@@@#
+ *  #@@@#˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙#@@@#
+ *  #@@@@˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙@@@@#
+ *  #@@@@@##*˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙*##@@@@@#
+ *  *#######*˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙*#######* */
+/* . ======================= */
+/*! ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+ * . -= IMAGES SETTINGS =- */
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙ */
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙ */
 .et_pb_wc_related_products .et_shop_image > img {
   border-width: 5px !important;
   border-color: #92C73D !important;
 }
 
-/*!
- * * FROM DIVI OPTION CSS
- * * */
-/* .
- * .
- * . -= SECTION CLASSES =-
- * .
- * . */
-/* .
- * . -= BUTTONS =-
- * . */
+/*  ========================= */
+/*! ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+ * . --= SECTION CLASSES =-- */
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙ */
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙ */
+/*! EMPTY */
+/* . ================== */
+/*! ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+ * . --= BUTTONS =-- */
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙ */
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙ */
 .et_divi_theme .et_pb_button {
   padding: 0.3em 1em 0.5em;
 }
@@ -41,21 +60,23 @@
   padding-right: 1.8em;
 }
 
-/* .
- * . TEXT'S LISTS
- * . */
+/* . ======================= */
+/*! ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+ * . -== TEXT'S LISTS ==- */
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙ */
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙ */
 .et_pb_text_inner li {
   padding-bottom: 2%;
 }
 
-/* .
- * .
- * . === WOO My Account ==->
- * . */
-/* . Readjust Accunt menu
- * . and Welcome message
- * . 
- * . */
+/* =========================== */
+/*! ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+ * | === WOO My Account ==-> */
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙ */
+/* . Adjust Account menu
+ * . and Welcome message */
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙ */
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙ */
 @media only screen and (min-width: 981px) {
   .woocommerce .woocommerce-MyAccount-navigation {
     float: left;
@@ -108,15 +129,36 @@
   transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
 }
 
-/* .
+/* . =======================
  * . ___ END WOO My Account
  * . */
-/* .
- * .
- * . -== SINGLE-PRODUCT PAGE INFO MODS ==->
- * .
- * . */
-/* -- Font styling in subscription text block -- */
+/* ============================================ */
+/*! .
+ * | . -== SINGLE-PRODUCT PAGE LAYOUT MODS ==-> */
+/* . */
+/* . */
+/*! --= Responsive 2 Columns layout =--
+ * * --= for Siingle Product Pages   =-- */
+@media (min-width: 601px) {
+  .single-product.et_pb_gutters2 .et_pb_column_1_2, .et_pb_gutters2.et_pb_row .et_pb_column_1_2 {
+    width: 48.5% !important;
+  }
+  .single-product.et_pb_gutters2 .et_pb_column, .et_pb_gutters2.et_pb_row .et_pb_column {
+    margin-right: 3% !important;
+  }
+  .single-product.et_pb_gutters2 .et_pb_column_1_2, .et_pb_gutters2.et_pb_row .et_pb_column_1_2 {
+    width: 48.5% !important;
+  }
+  .single-product .et_pb_row .et_pb_column.et-last-child, .single-product .et_pb_row .et_pb_column:last-child, .single-product .et_pb_row_inner .et_pb_column.et-last-child, .single-product .et_pb_row_inner .et_pb_column:last-child {
+    margin-right: 0 !important;
+  }
+}
+/* . ======================================= */
+/*! .
+ * | -== SINGLE-PRODUCT PAGE INFO MODS ==-> */
+/* . */
+/* . */
+/*! -- Font styling in subscription text block -- */
 .wps_sfw_subscription_wrapper label, .wps_sfw_subscription_wrapper p, .wps_sfw_subscription_wrapper span {
   font-weight: 500;
 }
@@ -131,7 +173,8 @@
 }
 
 /* -- Hides one-time purchase selector -- */
-/* -= SWATCHES MODS =- */
+/*! .
+ * -= SWATCHES MODS =- */
 .single-product label[for=pa_multi-day] {
   display: none;
 }
@@ -161,16 +204,16 @@
   font-size: 0.8em;
 }
 
-/* .
- * .
- * . == END SINGLE-PRODUCT PAGE MODS.
- * .
- * . */
-/* .
- * .
- * . WANT A TAP SECTION ==->
- * .
- * . */
+/* .  */
+/* . */
+/* . == END SINGLE-PRODUCT PAGE MODS. */
+/* . */
+/* . ################################ */
+/* _______________________________ */
+/*!|                             |
+ * | === WANT A TAP SECTION ==-> | */
+/* |                             | */
+/* |_____________________________| */
 .x-sec.x-want-a-tap .x-want {
   /* display: inline-block; */
   width: 7%;
@@ -182,11 +225,11 @@
   float: left;
 }
 
-/* .
- * .
- * . -== TAP SYSTEM ==->
- * .
- * . */
+/* _______________________ */
+/*!|                     |
+ * | -== TAP SYSTEM ==-> | */
+/* |                     | */
+/* |_____________________| */
 @media screen and (max-width: 480px) {
   .x-want-a-tap.x-swap-column .et_pb_row, .x-swap-column .et_pb_row {
     display: flex;
@@ -202,23 +245,24 @@
 /* .
  * .
  * -== END TAP SYSTEM
- * -==--------------- */
-/* .
  * .
- * . FORM STYLES
- * .
- * . */
+ * ######################### */
+/* ________________________ */
+/*!|                      |
+ * | -== FORM STYLES ==-> | */
+/* |                      | */
+/* |______________________| */
 .et_pb_contact_form_0 input:focus, .et_pb_contact_form_0 textarea.et_pb_contact_message:focus {
   border: 2px solid #92C73D;
   border-radius: 15px;
   background-color: #ffffff;
 }
 
-/* .
- * .
- * . SOCIAL MEDIA ICONS
- * .
- * . */
+/* _______________________________ */
+/*!|                             |
+ * | -== SOCIAL MEDIA ICONS ==-> | */
+/* |                             | */
+/* |_____________________________| */
 .et_pb_social_media_follow a.icon, .et_pb_social_media_follow .et_pb_social_icon.et_pb_social_network_link.et-social-facebook a.icon {
   background-color: #dd5162 !important;
   transition: transform 0.1s ease;
@@ -229,11 +273,11 @@
   transform: scale(1.1);
 }
 
-/* .
- * .
- * . CUSTOM CLASSES
- * .
- * . */
+/* ___________________________ */
+/*!|                         |
+ * | -== CUSTOM CLASSES ==-> | */
+/* |                         | */
+/* |_________________________| */
 @media screen and (max-width: 980px) {
   .et_pb_row.x-row-flex {
     display: flex;
@@ -272,11 +316,11 @@
     transform: translate(-5%, 15%);
   }
 }
-/* .
- * .
- * . TOGGLE CUSTOM
- * .
- * . */
+/* __________________________ */
+/*!|                        |
+ * | -== TOGGLE CUSTOM ==-> | */
+/* |                        | */
+/* |________________________| */
 et_pb_accordion.x-toggle .et_pb_toggle_title {
   margin-left: 5%;
 }
@@ -299,11 +343,11 @@ et_pb_accordion.x-toggle .et_pb_toggle_title {
   transition: transform 400ms ease-in-out 0ms;
 }
 
-/* .
- * .
- * . HEADER CUSTOM
- * .
- * . */
+/* __________________________ */
+/*!|                        |
+ * | -== HEADER CUSTOM ==-> | */
+/* |                        | */
+/* |________________________| */
 @media screen and (max-width: 980px) {
   .et_fixed_nav #main-header, #main-header #mobile_menu {
     background-color: #245a34;
@@ -325,11 +369,11 @@ et_pb_accordion.x-toggle .et_pb_toggle_title {
     background-color: #245a34;
   }
 }
-/* .
- * .  -=== Responsive 2 Columns layout ==->
- * .  -=== for Siingle Product Pages   ==->
- * .
- * . */
+/* ________________________________________ */
+/*!|                                      |
+ * | -== Responsive 2 Columns layout ==-> |
+ * |     for Siingle Product Pages        | */
+/* |______________________________________| */
 @media (min-width: 601px) {
   .single-product.et_pb_gutters2 .et_pb_column_1_2, .et_pb_gutters2.et_pb_row .et_pb_column_1_2 {
     width: 48.5% !important;
@@ -347,11 +391,11 @@ et_pb_accordion.x-toggle .et_pb_toggle_title {
     margin-right: 0 !important;
   }
 }
-/* .
- * .  -== PAGES 3 COLUMN DISPLAY ==->
- * .  -== ---------------------- ==->
- * .
- * . */
+/* ___________________________________ */
+/*!|                                 |
+ * | -== PAGES 3 COLUMN DISPLAY ==-> | */
+/* |                                 | */
+/* |_________________________________| */
 @media screen and (min-width: 600px) and (max-width: 980px) {
   .x-sec .et_pb_column_1_3, .x-sec .et_pb_row.x-row-flex .et_pb_column.et_pb_column1_3 {
     width: calc(33.333% - 14px) !important;
@@ -362,12 +406,6 @@ et_pb_accordion.x-toggle .et_pb_toggle_title {
     margin-right: 0;
   }
 }
-/* . <-== END 3 COLUMN DISPLAY || */
-/* .
- * .  -== WOO COLUMN DISPLAY ==->
- * .  -== ------------------ ==->
- * .
- * . */
 @media (max-width: 980px) {
   body.woocommerce .x-sec .et_pb_row {
     width: 100%;
@@ -378,7 +416,7 @@ et_pb_accordion.x-toggle .et_pb_toggle_title {
     margin: 0 auto;
   }
   #main-content .et_pb_shop.x-woo .woocommerce > ul.products.columns-1 li.product, #main-content .et_pb_shop.x-woo .woocommerce > ul.products.columns-2 li.product, #main-content .et_pb_shop.x-woo .woocommerce > ul.products.columns-3 li.product, #main-content .et_pb_shop.x-woo .woocommerce > ul.products.columns-4 li.product, #main-content .et_pb_shop.x-woo .woocommerce > ul.products.columns-5 li.product, #main-content .et_pb_shop.x-woo .woocommerce > ul.products.columns-6 li.product {
-    width: calc(33% - 17px) !important;
+    width: calc(33% - 34px) !important;
     margin: 2%;
     margin-right: 3% !important;
   }
@@ -386,6 +424,13 @@ et_pb_accordion.x-toggle .et_pb_toggle_title {
     margin-right: 0 !important;
   }
 }
+/* . <-== END 3 COLUMN DISPLAY || */
+/* #############################  */
+/* _________________________________ */
+/*!|                               |
+ * | -== WOO 2 COLUMN DISPLAY ==-> | */
+/* |                               | */
+/* |_______________________________| */
 @media (max-width: 767px) {
   .et_pb_shop .woocommerce ul.products {
     display: flex;
@@ -419,14 +464,14 @@ et_pb_accordion.x-toggle .et_pb_toggle_title {
   }
 }
 /* <-== END WOO COLUMN DISPLAY ==-||
- * .
- * .
+ * . 
+ * . #################################
  * . */
-/* .
- * .  -== 2 COLUMNs SWAP ==->
- * .  -== -------------- ==->
- * .
- * . */
+/* ___________________________ */
+/*!|                         |
+ * | -== 2 COLUMNs SWAP ==-> | */
+/* |                         | */
+/* |_________________________| */
 @media screen and (max-width: 980px) {
   /*   .x-want-a-tap.x-swap-column .et_pb_row,
   * *.x-swap-column .et_pb_row {
@@ -437,11 +482,49 @@ et_pb_accordion.x-toggle .et_pb_toggle_title {
     margin-bottom: 4%;
   }
 }
-/* .
- * .  -== FOOTER CUSTOM ==->
- * .  -== ------------- ==->
- * .
- * . */
+/* __________________________________________ */
+/*!|                                        |
+ * | -== DELIVERY CHECK FOOTER SECTION ==-> | */
+/* |                                        | */
+/* |________________________________________| */
+#x-footer {
+  padding: 1%;
+  background-color: #f4c046;
+}
+#x-footer .default .second-column {
+  float: none;
+}
+
+.x-delivery-check {
+  padding: 1% 3%;
+}
+
+/*! -= OFFSET FOR FORM ANCHOR =- */
+#x-footer-target {
+  position: absolute;
+  margin: -100px;
+  width: 0;
+  height: 0;
+}
+
+#x-footer,
+#x-footer:target {
+  position: relative;
+}
+#x-footer::before,
+#x-footer:target::before {
+  position: relative;
+  display: block;
+  content: " ";
+  margin-top: -300px;
+  padding-top: 300px;
+}
+
+/* __________________________ */
+/*!|                        |
+ * | -== FOOTER CUSTOM ==-> | */
+/* |                        | */
+/* |________________________| */
 #main-footer {
   width: 100%;
 }

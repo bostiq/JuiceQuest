@@ -118,6 +118,7 @@ add_action('get_footer', 'footer_delivery_check');
 
 function footer_delivery_check() {
   echo '<div id="x-footer">';
+  echo '<i id="x-footer-target"></i>';
   echo '<div class="x-text x-delivery-check et_pb_module et_pb_text et_pb_text_align_left et_pb_bg_layout_light">';
 	echo do_shortcode('[delivery_area_form]');
 	echo	'</div>';
