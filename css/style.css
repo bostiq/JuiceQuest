@@ -502,7 +502,7 @@ et_pb_accordion.x-toggle .et_pb_toggle_title {
 /*! -= OFFSET FOR FORM ANCHOR =- */
 #x-footer-target {
   position: absolute;
-  margin: -100px;
+  margin-top: -100px;
   width: 0;
   height: 0;
 }
