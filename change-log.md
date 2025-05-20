@@ -1,7 +1,18 @@
 
 # _CHANGE LOG_
 
-## Last changes
+
+
+
+## Last changes:
+
+### Tue May 20 13:31:31 2025 +0930
+
+- Added: Automatic check 'save customer card details' js script and hid the check box
+  
+- Added: custom tabs components and styling
+
+### Sat Mar 22 2025
 
 - Added extra footer section to place _Delivery lookup_ form in functions.php
 
