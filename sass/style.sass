@@ -203,11 +203,93 @@
   .wps_sfw_inner_description
     color: $hunter-green
     font-size: 0.8em
+
+/*! CUSTOM TABS INFO STYLING
+
+.x-tabContent
+  &.x-tabBox
+    margin-top: 20px
+
+  .et-info,
+	.et-warning,
+	.et-bio,
+	.et-download,
+	.et-shadow
+    border: none
+
+  .et-info .et-box-content,
+	.et-warning .et-box-content,
+	.et-bio .et-box-content,
+	.et-download .et-box-content,
+	.et-shadow .et-box-content
+    color: $black
+    text-shadow: 0 0
+    border: none
+    font-size: 18px
+    border-radius: 5px
+    box-shadow: none
+    padding: 1% 2% 1.5% 60px
+
+  .et-info::before,
+	.et-warning::before,
+	.et-bio::before,
+	.et-download::before,
+	.et-shadow::before
+    font-family: ETmodules
+    background: none
+    font-size: 20px
+    top: 21%
+
+  .et-info
+    .et-box-content
+      background: $yellow-green
+
+    &::before
+      content: "\070"
+
+  .et-warning
+    .et-box-content
+      background: $saffron
+
+    &::before
+      content: "\073"
+
+  .et-shadow::before
+    content: "\006c"
+
+  .et-bio::before
+    content: "\075"
+
+  .et-download::before
+    content: "\e004"
+
+
+  
 /* . 
 /* .
 /* . == END SINGLE-PRODUCT PAGE MODS.
 /* .
 /* . ################################
+
+ /* . =======================================
+/*! .
+  | -== CHECKOUT PAGE ==->
+/* .
+/* .
+
+  /* HIDES STRIPE 'SAVE CARD DETAILS' CHECKBOX
+
+.page-id-1080 fieldset
+  .form-row.woocommerce-SavedPaymentMethods-saveNew.woocommerce-validated
+    visibility: hidden
+
+/* . 
+/* .
+/* . == END CHECKOUT PAGE.
+/* .
+/* . ################################
+
+ 
 /* _______________________________
 /*!|                             |
    | === WANT A TAP SECTION ==-> |

@@ -1,0 +1,1 @@
+document.getElementById("wc-stripe-new-payment-method").checked = true; 

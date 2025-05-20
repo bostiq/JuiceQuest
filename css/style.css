@@ -204,9 +204,82 @@
   font-size: 0.8em;
 }
 
+/*! CUSTOM TABS INFO STYLING */
+.x-tabContent.x-tabBox {
+  margin-top: 20px;
+}
+.x-tabContent .et-info,
+.x-tabContent .et-warning,
+.x-tabContent .et-bio,
+.x-tabContent .et-download,
+.x-tabContent .et-shadow {
+  border: none;
+}
+.x-tabContent .et-info .et-box-content,
+.x-tabContent .et-warning .et-box-content,
+.x-tabContent .et-bio .et-box-content,
+.x-tabContent .et-download .et-box-content,
+.x-tabContent .et-shadow .et-box-content {
+  color: #000000;
+  text-shadow: 0 0;
+  border: none;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: none;
+  padding: 1% 2% 1.5% 60px;
+}
+.x-tabContent .et-info::before,
+.x-tabContent .et-warning::before,
+.x-tabContent .et-bio::before,
+.x-tabContent .et-download::before,
+.x-tabContent .et-shadow::before {
+  font-family: ETmodules;
+  background: none;
+  font-size: 20px;
+  top: 21%;
+}
+.x-tabContent .et-info .et-box-content {
+  background: #92C73D;
+}
+.x-tabContent .et-info::before {
+  content: "p";
+}
+.x-tabContent .et-warning .et-box-content {
+  background: #f4c046;
+}
+.x-tabContent .et-warning::before {
+  content: "s";
+}
+.x-tabContent .et-shadow::before {
+  content: "l";
+}
+.x-tabContent .et-bio::before {
+  content: "u";
+}
+.x-tabContent .et-download::before {
+  content: "\e004";
+}
+
 /* .  */
 /* . */
 /* . == END SINGLE-PRODUCT PAGE MODS. */
+/* . */
+/* . ################################
+ *
+ * /* . ======================================= */
+/*! .
+ * | -== CHECKOUT PAGE ==-> */
+/* . */
+/* .
+ *
+ * /* HIDES STRIPE 'SAVE CARD DETAILS' CHECKBOX */
+.page-id-1080 fieldset .form-row.woocommerce-SavedPaymentMethods-saveNew.woocommerce-validated {
+  visibility: hidden;
+}
+
+/* .  */
+/* . */
+/* . == END CHECKOUT PAGE. */
 /* . */
 /* . ################################ */
 /* _______________________________ */
