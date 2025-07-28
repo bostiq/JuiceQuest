@@ -16,47 +16,14 @@
 
 /*- Add any CSS custom code for this child theme below this line - 
 @use 'index' as *
-/* . =======================
-/*! ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
-  . -= IMAGES SETTINGS =-
-/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
-/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+@use 'sass:color'
+/* =======================================
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/*! ---= THIS STYLE.SASS WILL BE USED =---
+/*! --= FOR DIVI OPTION TRANFER RULES  =--
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
 
-.et_pb_wc_related_products
-  .et_shop_image > img
-    border-width: 5px !important
-    border-color:  $yellow-green !important
-  
-/*  =========================
-/*! ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
-  . --= SECTION CLASSES =--
-/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
-/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
-// @media screen and (max-width: 480px)
-  // .x-sec
-  //   margin-left: 5%
-  //   margin-right: 5%
-
-/*! EMPTY */
-
-/* . ==================
-/*! ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
-  . --= BUTTONS =--
-/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
-/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
-.et_divi_theme .et_pb_button
-  padding: .3em 1em 0.5em
-
-  &:hover
-    padding: .3em 1em 0.5em
-    padding-right: 1.8em
-/* . =======================
-/*! ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
-  . -== TEXT'S LISTS ==-
-/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
-/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
-.et_pb_text_inner li
-  padding-bottom: 2%
 /* ===========================
 /*! ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
   | === WOO My Account ==->
@@ -133,29 +100,28 @@
 /*! --= Responsive 2 Columns layout =--
  * --= for Siingle Product Pages   =--
 
-@media (min-width: 601px)
-  .single-product.et_pb_gutters2 .et_pb_column_1_2, .et_pb_gutters2.et_pb_row .et_pb_column_1_2
-    width: 48.5% !important
+// @media (min-width: 601px)
+//   .single-product.et_pb_gutters2 .et_pb_column_1_2, .et_pb_gutters2.et_pb_row .et_pb_column_1_2
+//     width: 48.5% !important
 
-  .single-product.et_pb_gutters2 .et_pb_column, .et_pb_gutters2.et_pb_row .et_pb_column
-    margin-right: 3% !important
+//   .single-product.et_pb_gutters2 .et_pb_column, .et_pb_gutters2.et_pb_row .et_pb_column
+//     margin-right: 3% !important
 
-  .single-product.et_pb_gutters2 .et_pb_column_1_2, .et_pb_gutters2.et_pb_row .et_pb_column_1_2
-    width: 48.5% !important
+//   .single-product.et_pb_gutters2 .et_pb_column_1_2, .et_pb_gutters2.et_pb_row .et_pb_column_1_2
+//     width: 48.5% !important
 
-  .single-product
-    .et_pb_row, .et_pb_row_inner
-      .et_pb_column
-        &.et-last-child, &:last-child
-          margin-right: 0 !important
+//   .single-product
+//     .et_pb_row, .et_pb_row_inner
+//       .et_pb_column
+//         &.et-last-child, &:last-child
+//           margin-right: 0 !important
+/*! EMPTY
 
-
-/* . =======================================
-/*! .
-  | -== SINGLE-PRODUCT PAGE INFO MODS ==->
-/* .
-/* .
-
+/* _________________________________________
+/*!|                                       |
+   | ===  SINGLE-PRODUCT PAGE INFO  ==->   |
+/* |                                       |
+/* |_______________________________________|
 
 /*! -- Font styling in subscription text block --
 
@@ -170,100 +136,7 @@
 .et_pb_wc_price .price .wps_sfw_interval, .wps_sfw_check_simple_cart_one_time_purchase
   display: none
 
-/* -- Hides one-time purchase selector --
-
-/*! .
-  -= SWATCHES MODS =-
-
-.single-product
-  label[for="pa_multi-day"]
-    display: none
-
-  .variations_form
-    padding-top: 10px
-
-    .cfvsw-label-option
-      background-color: $yellow-green
-      color: $white
-      font-size: 16px
-      font-weight: 700
-      padding-bottom: 11px
-
-      &.cfvsw-selected-swatch
-        background-color: $hunter-green
-
-    .reset_variations
-      padding: 5px 10px
-      border: 1px $red solid
-      margin-left: 10px
-      margin-top: 0 !important
-      font-weight: 700
-
-.single_variation_wrap
-  .wps_sfw_inner_description
-    color: $hunter-green
-    font-size: 0.8em
-
-/*! CUSTOM TABS INFO STYLING
-
-.x-tabContent
-  &.x-tabBox
-    margin-top: 20px
-
-  .et-info,
-	.et-warning,
-	.et-bio,
-	.et-download,
-	.et-shadow
-    border: none
-
-  .et-info .et-box-content,
-	.et-warning .et-box-content,
-	.et-bio .et-box-content,
-	.et-download .et-box-content,
-	.et-shadow .et-box-content
-    color: $black
-    text-shadow: 0 0
-    border: none
-    font-size: 18px
-    border-radius: 5px
-    box-shadow: none
-    padding: 1% 2% 1.5% 60px
-
-  .et-info::before,
-	.et-warning::before,
-	.et-bio::before,
-	.et-download::before,
-	.et-shadow::before
-    font-family: ETmodules
-    background: none
-    font-size: 20px
-    top: 21%
-
-  .et-info
-    .et-box-content
-      background: $yellow-green
-
-    &::before
-      content: "\070"
-
-  .et-warning
-    .et-box-content
-      background: $saffron
-
-    &::before
-      content: "\073"
-
-  .et-shadow::before
-    content: "\006c"
-
-  .et-bio::before
-    content: "\075"
-
-  .et-download::before
-    content: "\e004"
-
-
+/* ^^^-- Hides one-time purchase selector --^^^
   
 /* . 
 /* .
@@ -271,11 +144,12 @@
 /* .
 /* . ################################
 
- /* . =======================================
-/*! .
-  | -== CHECKOUT PAGE ==->
-/* .
-/* .
+/* _____________________________
+/*!|                           |
+   | ===  CHECKOUT PAGE ==->   |
+/* |                           |
+/* |___________________________|
+
 
   /* HIDES STRIPE 'SAVE CARD DETAILS' CHECKBOX
 
@@ -432,18 +306,19 @@ et_pb_accordion.x-toggle
 
 /* __________________________
 /*!|                        |
-   | -== HEADER CUSTOM ==-> |
+   | -==    HEADER     ==-> |
 /* |                        |
 /* |________________________|
 
 @media screen and (max-width: 980px)
   .et_fixed_nav #main-header, #main-header #mobile_menu
-    background-color: $hunter-green
+    background-color: color.adjust($white, $alpha: -.1 )
     position: fixed
 
 @media only screen and (min-width: 980px)
-  .product-template-default #main-header, .woocommerce-checkout #main-header,
-  .woocommerce-cart #main-header, .woocommerce-account #main-header
+  // .product-template-default #main-header, .woocommerce-checkout #main-header,
+  // .woocommerce-cart #main-header, .woocommerce-account #main-header
+  .product-template-default #main-header  
     background-color: $hunter-green
 
   .product-template-default .et-fixed-header
@@ -456,31 +331,62 @@ et_pb_accordion.x-toggle
     .et-search-form
       background-color: $hunter-green
 
+/*!` 27  MAY 2025 CHANGES
+  AMEND ABOVE CODE ONCE DONE
+  WHITE BACKGROUND HEADER 
+    SINGLE PRODUCT ONLY */
+
+@media screen and (max-width: 980px)
+  .product-template-default .et_fixed_nav #main-header, .product-template-default #main-header #mobile_menu
+    background-color: $white
+    position: fixed
+
+@media only screen and (min-width: 980px)
+  .product-template-default #main-header
+    background-color: $white
+
+    ul#top-menu
+        // background-color: $white
+        li, a
+          color: $hunter-green
+
+  .product-template-default .et-fixed-header
+    &#main-header
+      background-color: $white
+
+      ul#top-menu
+        background-color: $white
+        li, a
+          color: $hunter-green !important
+
+    .et-search-form
+      background-color: $white
+
 /* ________________________________________
 /*!|                                      |
    | -== Responsive 2 Columns layout ==-> |
-   |     for Siingle Product Pages        |
+   |     for Single Product Pages         |
 /* |______________________________________|
 
-@media (min-width: 601px)
-  .single-product.et_pb_gutters2 .et_pb_column_1_2, .et_pb_gutters2.et_pb_row .et_pb_column_1_2
-    width: 48.5% !important
+// @media (min-width: 601px) and (max-width: 980px)
+  // .single-product.et_pb_gutters2 .et_pb_column_1_2, .et_pb_gutters2.et_pb_row .et_pb_column_1_2
+  //   width: 48.5% !important
 
-  .single-product.et_pb_gutters2 .et_pb_column, .et_pb_gutters2.et_pb_row .et_pb_column
-    margin-right: 3% !important
+  // .single-product.et_pb_gutters2 .et_pb_column, .et_pb_gutters2.et_pb_row .et_pb_column
+  //   margin-right: 3% !important
 
-  .single-product.et_pb_gutters2 .et_pb_column_1_2, .et_pb_gutters2.et_pb_row .et_pb_column_1_2
-    width: 48.5% !important
+  // .single-product.et_pb_gutters2 .et_pb_column_1_2, .et_pb_gutters2.et_pb_row .et_pb_column_1_2
+  //   width: 48.5% !important
 
-  .single-product
-    .et_pb_row .et_pb_column
-      &.et-last-child, &:last-child
-        margin-right: 0 !important
+  // .single-product
+  //   .et_pb_row .et_pb_column
+  //     &.et-last-child, &:last-child
+  //       margin-right: 0 !important
 
-    .et_pb_row_inner .et_pb_column
-      &.et-last-child, &:last-child
-        margin-right: 0 !important
-
+  //   .et_pb_row_inner .et_pb_column
+  //     &.et-last-child, &:last-child
+  //       margin-right: 0 !important
+/*! EMPTY
 /* ___________________________________
 /*!|                                 |
    | -== PAGES 3 COLUMN DISPLAY ==-> |
@@ -499,8 +405,8 @@ et_pb_accordion.x-toggle
 
 
 @media (max-width: 980px)
-  body.woocommerce .x-sec .et_pb_row
-    width: 100%
+  // body.woocommerce .x-sec .et_pb_row
+  //   width: 100%
 
   #main-content .et_pb_shop.x-woo .woocommerce
     > ul.products
@@ -564,7 +470,7 @@ et_pb_accordion.x-toggle
 //     margin-right: 0 !important
 //     width: 100% !important
 
-@media screen and (max-width: 480px)
+@media screen and (max-width: 479px)
   #main-content .et_pb_shop.x-woo .woocommerce > ul.products
     &.columns-1 li.product, 
     &.columns-2 li.product, 
@@ -582,12 +488,15 @@ et_pb_accordion.x-toggle
       &:nth-child(2n)
         margin-right: 0px !important
 
+  .woocommerce-page ul.products li.product:nth-child(3n),
+  #main-content .et_pb_shop.x-woo .woocommerce > ul.products.columns-4 li.product:nth-child(3n)
+    margin-right: 0% !important
+
 /* <-== END WOO COLUMN DISPLAY ==-||
  . 
  . #################################
  .
-
-
+  
 /* ___________________________
 /*!|                         |
    | -== 2 COLUMNs SWAP ==-> |
@@ -604,22 +513,110 @@ et_pb_accordion.x-toggle
   .x-want-a-tap.x-swap-column .et_pb_column
     margin-bottom: 4%
 
-/* __________________________________________
-/*!|                                        |
-   | -== DELIVERY CHECK FOOTER SECTION ==-> |
-/* |                                        |
-/* |________________________________________|
+/* __________________________________
+/* |                                 |
+/*!| -== DELIVERY CHECK SECTION ==-> |
+/* |                                 |
+/* |_________________________________|
 
-#x-footer
-  padding: 1%
-  background-color: #f4c046
 
-  .default
-    .second-column
-      float: none
 
 .x-delivery-check
-  padding: 1% 3%
+  min-width: 80%
+  max-width: 1280px !important
+  margin: 0 auto
+
+  .et_pb_blurb_content
+   
+    display: flex
+    align-items: center
+    flex-flow: row nowrap
+
+    > div
+      display: block
+      flex: 1 1 auto
+
+    .et_pb_main_blurb_image
+      width: 11%
+      flex-grow: 0
+      flex-basis: 100px
+      max-width: 11%
+      margin-bottom: 0px
+
+    img
+      max-width: 100%
+
+@media only screen and (max-width: 980px)
+  .x-delivery-check
+    width: 90%
+
+@media only screen and (max-width: 400px)
+  .x-delivery-check
+    width: 95%
+
+
+
+@media only screen and (max-width: 600px)
+  .x-delivery-check
+    padding-bottom: 2.5%
+
+    .et_pb_blurb_content
+      .wdap_product_availity_form
+        
+        #wdap_type_location
+          border-radius: 10px 10px 0 0 !important
+        
+        button
+          border-radius: 0 0 10px 10px !important
+
+
+/* __________________________________
+/* |                                 |
+/*!| -== DELIVERY CHECK SECTION ==-> |
+/* |     CART PAGE CUSTOMISATIONS    |
+/* |_________________________________|
+
+.woocommerce.woocommerce-cart .placeholdertd
+  border-top: 1px solid rgba(0, 0, 0, 0.1) !important
+  border-bottom: 0px solid rgba(0, 0, 0, 0.1) !important
+
+.woocommerce-cart
+  .product_avalibility_tab
+    .avilable, .notavilable
+      display: block
+      text-align: left
+
+    .avilable
+      background-color: $yellow-green
+      color: $black
+      font-weight: 500
+      padding: 2% 4% 3%
+      border-radius: 5px
+
+    .notavilable
+      background-color: $warning
+      color: $white
+      font-weight: 500
+      padding: 2% 6% 4%
+      border-radius: 5px
+
+  .wdap_notification_message
+    &.can_be_delivered
+      background-color: #9ec756
+      padding: 2%
+
+      span
+        color: #000 !important
+        font-weight: 500
+
+    &.cant_be_delivered
+      background-color: $warning
+      padding: 2%
+
+      span
+        color: $white !important
+        font-weight: 500
+
 
 /*! -= OFFSET FOR FORM ANCHOR =-
 

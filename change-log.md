@@ -6,6 +6,11 @@
 
 ## Last changes:
 
+### Wed May 28 13:31:31 2025
+#### Single Product Page changes
+
+- Added Breadcrumbs, styled.
+
 ### Tue May 20 13:31:31 2025 +0930
 
 - Added: Automatic check 'save customer card details' js script and hid the check box

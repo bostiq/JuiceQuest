@@ -1,0 +1,142 @@
+@use 'colors.sass' as *
+/* ========================
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/*! -= GLOBAL COMPONENTS =-
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+
+/* ======================
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/*! -= IMAGES SETTINGS =-
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/*! EMPTY */
+// .et_pb_wc_related_products
+//   .et_shop_image > img
+//     border-width: 5px !important
+//     border-color:  $yellow-green !important
+  
+/*  =========================
+/*! ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+  . --= SECTION CLASSES =--
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+// @media screen and (max-width: 480px)
+  // .x-sec
+  //   margin-left: 5%
+  //   margin-right: 5%
+
+/*! EMPTY */
+
+/* . ==================
+/*! ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+  . --= BUTTONS =--
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+.et_divi_theme .et_pb_button
+  padding: .3em 1em 0.5em
+
+  &:hover
+    padding: .3em 1em 0.5em
+    padding-right: 1.8em
+
+/* ======================
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/*! -== TEXT'S LISTS ==-
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+.et_pb_text_inner li
+  padding-bottom: 2%
+
+
+
+/*! CUSTOM TABS INFO STYLING
+
+.x-tabContent
+  &.x-tabBox
+    margin-top: 20px
+
+  .et-info,
+	.et-warning,
+	.et-bio,
+	.et-download,
+	.et-shadow
+    border: none
+
+  .et-info .et-box-content,
+	.et-warning .et-box-content,
+	.et-bio .et-box-content,
+	.et-download .et-box-content,
+	.et-shadow .et-box-content
+    color: $black
+    text-shadow: 0 0
+    border: none
+    font-size: 18px
+    border-radius: 5px
+    box-shadow: none
+    padding: 1% 2% 1.5% 60px
+
+  .et-info::before,
+	.et-warning::before,
+	.et-bio::before,
+	.et-download::before,
+	.et-shadow::before
+    font-family: ETmodules
+    background: none
+    font-size: 20px
+    top: 21%
+
+  .et-info
+    .et-box-content
+      background: $yellow-green
+
+    &::before
+      content: "\070"
+
+  .et-warning
+    .et-box-content
+      background: $saffron
+
+    &::before
+      content: "\073"
+
+  .et-shadow::before
+    content: "\006c"
+
+  .et-bio::before
+    content: "\075"
+
+  .et-download::before
+    content: "\e004"
+
+/*! - - Breacrumbs - -
+.woocommerce-breadcrumb
+  text-transform: uppercase
+  font-weight: 500
+
+/* ________________________
+/* |                      |
+/*!| -== FORM STYLES ==-> |
+/* |                      |
+/* |______________________|
+
+.et_pb_contact_form_0
+  input:focus, textarea.et_pb_contact_message:focus
+    border: 2px solid $yellow-green
+    border-radius: 15px
+    background-color: $white
+/* _______________________________
+/* |                             |
+/*!| -== SOCIAL MEDIA ICONS ==-> |
+/* |                             |
+/* |_____________________________|
+
+.et_pb_social_media_follow
+  a.icon, .et_pb_social_icon.et_pb_social_network_link.et-social-facebook a.icon
+    background-color: $indian-red !important
+    transition: transform .1s ease
+
+  a.icon:hover
+    background-color: $butterscotch !important
+    transition: transform .1s ease
+    transform: scale(1.1)
