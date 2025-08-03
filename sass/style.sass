@@ -17,6 +17,84 @@
 /*- Add any CSS custom code for this child theme below this line - 
 @use 'index' as *
 @use 'sass:color'
+
+/* _________________________________
+/* |                               |
+/*!| ===  HOME PAGE LAYOUT  ==->   |
+/* |                               |
+/* |_______________________________|
+
+@media screen and (max-width: 980px)
+  .x-sec
+    .x-2-col, .x-2-col-mobile
+      display: flex
+      flex-flow: row wrap
+      gap: 3%
+
+      .et_pb_column 
+        flex:1 1 48%
+        width: 47%
+        margin: 0
+        
+        &.x-column
+          margin-top: 20% !important
+
+@media screen and (max-width: 640px)
+  .x-sec
+    .x-2-col
+      display: flex
+      flex-flow: column wrap
+
+      .et_pb_column 
+        width: 100%
+
+        &.x-column
+          margin-top: revert
+
+  .x-illustrations
+    .et_pb_row_5col
+      display: flex
+      gap: 3%
+      // grid-template-columns: repeat(3, 1fr)
+  
+      .et_pb_column 
+        width: 100%
+        margin: 0
+        justify-content: center
+        align-content: center
+        flex: 1 1 26%
+
+
+.x-enjoy
+  .et_pb_image
+    .et_pb_image_wrap 
+      --thumb-width: 100%
+      position: relative
+      display: inline-block
+      width: var(--thumb-width)
+      max-width: var(--thumb-width)
+      height: 0
+      padding-bottom: var(--thumb-width) // square ratio 
+      margin: 2px
+      overflow: hidden
+      border-radius: 20px
+      img 
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+@media screen and (max-width: 640px)
+  .x-sec
+    .x-2-col
+      display: flex
+      flex-flow: column wrap
+
+      .et_pb_column 
+        width: 100%
+
+        &.x-column
+          margin-top: revert
 /* =======================================
 /* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
 /*! ---= THIS STYLE.SASS WILL BE USED =---
@@ -118,31 +196,31 @@
 /*! EMPTY
 
 /* _________________________________________
-/*!|                                       |
-   | ===  SINGLE-PRODUCT PAGE INFO  ==->   |
+/* |                                       |
+/*!| ===  SINGLE-PRODUCT PAGE INFO  ==->   |
 /* |                                       |
 /* |_______________________________________|
 
 /*! -- Font styling in subscription text block --
 
-.wps_sfw_subscription_wrapper
-  label, p, span
-    font-weight: 500
+// .wps_sfw_subscription_wrapper
+//   label, p, span
+//     font-weight: 500
   
-  p.wps_sfw_inner_description:not(.has-background):last-of-type
-    padding-bottom: 20px
+//   p.wps_sfw_inner_description:not(.has-background):last-of-type
+//     padding-bottom: 20px
 /* ^^^ Padding under wps_sfw_inner_description ^^^ 
 /* -- Hides/Shows Price interval under the product name --
-.et_pb_wc_price .price .wps_sfw_interval, .wps_sfw_check_simple_cart_one_time_purchase
-  display: none
+// .et_pb_wc_price .price .wps_sfw_interval, .wps_sfw_check_simple_cart_one_time_purchase
+//   display: none
 
 /* ^^^-- Hides one-time purchase selector --^^^
   
 /* . 
 /* .
-/* . == END SINGLE-PRODUCT PAGE MODS.
+/* . == END SINGLE-PRODUCT PAGE MODS
 /* .
-/* . ################################
+/* . =================================
 
 /* _____________________________
 /*!|                           |
@@ -161,7 +239,7 @@
 /* .
 /* . == END CHECKOUT PAGE.
 /* .
-/* . ################################
+/* . ==================#######
 
  
 /* _______________________________
@@ -198,169 +276,8 @@
    .
    -== END TAP SYSTEM
    .
-   #########################
-/* ________________________
-/*!|                      |
-   | -== FORM STYLES ==-> |
-/* |                      |
-/* |______________________|
+   ====================
 
-.et_pb_contact_form_0
-  input:focus, textarea.et_pb_contact_message:focus
-    border: 2px solid $yellow-green
-    border-radius: 15px
-    background-color: $white
-/* _______________________________
-/*!|                             |
-   | -== SOCIAL MEDIA ICONS ==-> |
-/* |                             |
-/* |_____________________________|
-
-.et_pb_social_media_follow
-  a.icon, .et_pb_social_icon.et_pb_social_network_link.et-social-facebook a.icon
-    background-color: $indian-red !important
-    transition: transform .1s ease
-
-  a.icon:hover
-    background-color: $butterscotch !important
-    transition: transform .1s ease
-    transform: scale(1.1)
-/* ___________________________
-/*!|                         |
-   | -== CUSTOM CLASSES ==-> |
-/* |                         |
-/* |_________________________|
-
-@media screen and (max-width: 980px)
-  .et_pb_row.x-row-flex
-    display: flex
-    flex-flow: wrap row
-    justify-content: space-between
-
-    /* 	gap:5%;
-    overflow: hidden
-
-    &.x-flex-49
-      gap: 0
-
-    .et_pb_column
-      padding: 0
-      margin: 0
-      width: calc(33.333% - 14px)
-      margin-bottom: 4%
-
-    &.x-flex-49 .et_pb_column
-      width: 47%
-
-    &::after
-      content: none
-      display: none
-
-  .x-row-flex .et_pb_row_inner::after
-    content: none
-    display: none
-
-  .x-overlap
-    display: flex
-
-    .et_pb_column
-      &:nth-child(1)
-        transform: translateX(5%)
-
-      &:nth-child(2)
-        transform: translate(-5%, 15%)
-
-/* __________________________
-/*!|                        |
-   | -== TOGGLE CUSTOM ==-> |
-/* |                        |
-/* |________________________|
-
-et_pb_accordion.x-toggle
-  .et_pb_toggle_title
-    margin-left: 5%
-
-.et_pb_accordion.x-toggle,
-.et_pb_accordion.x-toggle .et_pb_toggle_open
-  .et_pb_toggle_title
-    &::before
-
-      position: relative
-      left: -20px
-      top: 5px
-      width: 16px
-      height: 10px
-      display: inline-block
-      transform-origin: 10% 160%
-      transition: transform 400ms ease-in-out 0ms
-
-
-.et_pb_accordion.x-toggle
-  .et_pb_toggle_open
-    .et_pb_toggle_title
-      &::before 
-
-        transform: rotate(90deg)
-        transform-origin: 10% 160%
-        transition: transform 400ms ease-in-out 0ms
-
-/* __________________________
-/*!|                        |
-   | -==    HEADER     ==-> |
-/* |                        |
-/* |________________________|
-
-@media screen and (max-width: 980px)
-  .et_fixed_nav #main-header, #main-header #mobile_menu
-    background-color: color.adjust($white, $alpha: -.1 )
-    position: fixed
-
-@media only screen and (min-width: 980px)
-  // .product-template-default #main-header, .woocommerce-checkout #main-header,
-  // .woocommerce-cart #main-header, .woocommerce-account #main-header
-  .product-template-default #main-header  
-    background-color: $hunter-green
-
-  .product-template-default .et-fixed-header
-    &#main-header
-      background-color: $hunter-green
-
-      .nav li ul
-        background-color: $hunter-green
-
-    .et-search-form
-      background-color: $hunter-green
-
-/*!` 27  MAY 2025 CHANGES
-  AMEND ABOVE CODE ONCE DONE
-  WHITE BACKGROUND HEADER 
-    SINGLE PRODUCT ONLY */
-
-@media screen and (max-width: 980px)
-  .product-template-default .et_fixed_nav #main-header, .product-template-default #main-header #mobile_menu
-    background-color: $white
-    position: fixed
-
-@media only screen and (min-width: 980px)
-  .product-template-default #main-header
-    background-color: $white
-
-    ul#top-menu
-        // background-color: $white
-        li, a
-          color: $hunter-green
-
-  .product-template-default .et-fixed-header
-    &#main-header
-      background-color: $white
-
-      ul#top-menu
-        background-color: $white
-        li, a
-          color: $hunter-green !important
-
-    .et-search-form
-      background-color: $white
 
 /* ________________________________________
 /*!|                                      |
@@ -387,191 +304,17 @@ et_pb_accordion.x-toggle
   //     &.et-last-child, &:last-child
   //       margin-right: 0 !important
 /*! EMPTY
+
+
+/* ==================================
+/* |                                |
+/*!| -==       CART PAGE       ==-> |
+/* |                                |
+/* |================================|
+
+
 /* ___________________________________
-/*!|                                 |
-   | -== PAGES 3 COLUMN DISPLAY ==-> |
-/* |                                 |
-/* |_________________________________|
-  
-@media screen and (min-width: 600px) and (max-width: 980px)
-  .x-sec
-    .et_pb_column_1_3, .et_pb_row.x-row-flex .et_pb_column.et_pb_column1_3
-      width: calc(33.333% - 14px) !important
-      margin-right: 20px !important
-      margin-bottom: 30px !important
-
-    .et_pb_column_1_3:last-child
-      margin-right: 0
-
-
-@media (max-width: 980px)
-  // body.woocommerce .x-sec .et_pb_row
-  //   width: 100%
-
-  #main-content .et_pb_shop.x-woo .woocommerce
-    > ul.products
-      display: flex
-      flex-flow: wrap row
-      margin: 0 auto
-
-      &.columns-1 li.product, 
-      &.columns-2 li.product, 
-      &.columns-3 li.product, 
-      &.columns-4 li.product, 
-      &.columns-5 li.product, 
-      &.columns-6 li.product
-        width: calc(33% - 34px) !important
-        margin: 2%
-        margin-right: 3% !important
-
-    ul.products.columns-4 li.product:nth-child(3n)
-      margin-right: 0 !important
-
-/* . <-== END 3 COLUMN DISPLAY ||
-
-/* ############################# 
-
-/* _________________________________
-/*!|                               |
-   | -== WOO 2 COLUMN DISPLAY ==-> |
-/* |                               |
-/* |_______________________________|
-
-@media (max-width: 767px)
-  .et_pb_shop .woocommerce ul.products
-    display: flex
-    flex-flow: wrap row
-    justify-content: flex-start
-
-  #main-content .et_pb_shop.x-woo .woocommerce > ul.products
-    &.columns-1 li.product,
-    &.columns-2 li.product, 
-    &.columns-3 li.product, 
-    &.columns-4 li.product, 
-    &.columns-5 li.product, 
-    &.columns-6 li.product
-      width: calc(49% - 20px) !important
-      margin: 3% 10px !important
-      margin-right: 3% !important
-
-  .woocommerce-page ul.products li.product:nth-child(2n), 
-  #main-content .et_pb_shop.x-woo .woocommerce > ul.products.columns-4 li.product:nth-child(2n)
-    margin-right: 0px !important
-
-  .woocommerce-page ul.products li.product:nth-child(3n), 
-  #main-content .et_pb_shop.x-woo .woocommerce > ul.products.columns-4 li.product:nth-child(3n)
-    margin-right: 3% !important
-
-// @media screen and (max-width: 767px)
-//   body.woocommerce #main-content .x-sec .et_pb_row
-//     padding-left: 2% !important
-//     padding-right: 2% !important
-//     margin-left: 0 !important
-//     margin-right: 0 !important
-//     width: 100% !important
-
-@media screen and (max-width: 479px)
-  #main-content .et_pb_shop.x-woo .woocommerce > ul.products
-    &.columns-1 li.product, 
-    &.columns-2 li.product, 
-    &.columns-3 li.product, 
-    &.columns-4 li.product, 
-    &.columns-5 li.product, 
-    &.columns-6 li.product
-      width: calc(49% - 15px) !important
-      margin-right: 15px
-
-    &.columns-4 li.product
-      &:nth-child(3n)
-        margin-right: 10px !important
-
-      &:nth-child(2n)
-        margin-right: 0px !important
-
-  .woocommerce-page ul.products li.product:nth-child(3n),
-  #main-content .et_pb_shop.x-woo .woocommerce > ul.products.columns-4 li.product:nth-child(3n)
-    margin-right: 0% !important
-
-/* <-== END WOO COLUMN DISPLAY ==-||
- . 
- . #################################
- .
-  
-/* ___________________________
-/*!|                         |
-   | -== 2 COLUMNs SWAP ==-> |
-/* |                         |
-/* |_________________________|
-
-@media screen and (max-width: 980px)
-  /*   .x-want-a-tap.x-swap-column .et_pb_row,
-   *.x-swap-column .et_pb_row {
-   *  display: flex;
-   *  flex-flow: column-reverse
-   *}
-
-  .x-want-a-tap.x-swap-column .et_pb_column
-    margin-bottom: 4%
-
-/* __________________________________
-/* |                                 |
-/*!| -== DELIVERY CHECK SECTION ==-> |
-/* |                                 |
-/* |_________________________________|
-
-
-
-.x-delivery-check
-  min-width: 80%
-  max-width: 1280px !important
-  margin: 0 auto
-
-  .et_pb_blurb_content
-   
-    display: flex
-    align-items: center
-    flex-flow: row nowrap
-
-    > div
-      display: block
-      flex: 1 1 auto
-
-    .et_pb_main_blurb_image
-      width: 11%
-      flex-grow: 0
-      flex-basis: 100px
-      max-width: 11%
-      margin-bottom: 0px
-
-    img
-      max-width: 100%
-
-@media only screen and (max-width: 980px)
-  .x-delivery-check
-    width: 90%
-
-@media only screen and (max-width: 400px)
-  .x-delivery-check
-    width: 95%
-
-
-
-@media only screen and (max-width: 600px)
-  .x-delivery-check
-    padding-bottom: 2.5%
-
-    .et_pb_blurb_content
-      .wdap_product_availity_form
-        
-        #wdap_type_location
-          border-radius: 10px 10px 0 0 !important
-        
-        button
-          border-radius: 0 0 10px 10px !important
-
-
-/* __________________________________
-/* |                                 |
+/* |˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙|
 /*!| -== DELIVERY CHECK SECTION ==-> |
 /* |     CART PAGE CUSTOMISATIONS    |
 /* |_________________________________|
@@ -616,26 +359,6 @@ et_pb_accordion.x-toggle
       span
         color: $white !important
         font-weight: 500
-
-
-/*! -= OFFSET FOR FORM ANCHOR =-
-
-#x-footer-target
-  position: absolute
-  margin-top: -100px
-  width: 0
-  height: 0
-
-#x-footer,
-#x-footer:target
-  position: relative
-
-  &::before
-    position: relative
-    display: block
-    content: " "
-    margin-top: -300px
-    padding-top: 300px
 
 /* __________________________
 /*!|                        |

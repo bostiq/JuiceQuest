@@ -1,0 +1,574 @@
+/* ================================
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/*! -== GLOBAL LAYOUT SETTINGS ==-> 
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+
+@media screen and (max-width: 980px)
+  .et_pb_row.x-row-flex
+    display: flex
+    flex-flow: wrap row
+    justify-content: space-between
+
+    /* 	gap:5%;
+    overflow: hidden
+
+    &.x-flex-49
+      gap: 0
+
+    .et_pb_column
+      padding: 0
+      margin: 0
+      width: calc(33.333% - 14px)
+      margin-bottom: 4%
+
+    &.x-flex-49 .et_pb_column
+      width: 47%
+
+    &::after
+      content: none
+      display: none
+
+  .x-row-flex .et_pb_row_inner::after
+    content: none
+    display: none
+
+  .x-overlap
+    display: flex
+
+    .et_pb_column
+      &:nth-child(1)
+        transform: translateX(5%)
+
+      &:nth-child(2)
+        transform: translate(-5%, 15%)
+
+
+/* ______________________________________________
+/* |                                            |
+/*!|  ===    X-ROWS SCREEN ADJUSTMENTS    ==->  |
+/* |                                            |
+/* |____________________________________________|
+
+@media screen and (max-width: 980px)
+  .et-db #et-boc .et-l .x-row .et_pb_column
+    width: 47%
+    margin-right: 3%
+    margin-bottom: 3%
+
+@media screen and (max-width: 640px)
+  .et-db #et-boc .et-l .x-row .et_pb_column
+    width: 100%
+    margin: 0
+    margin-bottom: 3%
+
+/* __________________________________
+/* |                                |
+/*!|     === GRID SETTINGS ==->     |
+/* |                                |
+/* |________________________________|
+
+.x-grid,
+.x-info-banner .x-grid,
+.et-db #et-boc .et-l .x-info-banner .x-grid
+
+  display: grid
+
+.x-grid-4
+  grid-template-columns: repeat(4,1fr)
+  gap: 2%
+
+.x-grid-3
+  grid-template-columns: repeat(3,1fr)
+
+@media screen and (max-width: 980px)
+  
+  .x-grid-3, .x-grid-4
+    grid-template-columns: repeat(2, 1fr)
+
+@media screen and (max-width: 640px)
+
+  .x-grid-3
+    grid-template-columns: 1fr
+  
+
+.x-flex-columns
+  .et_pb_column
+    display: flex
+    flex-flow: column wrap
+    justify-content: space-between
+
+/* ___________________________________
+/* |                                 |
+/*!| -== PAGES 3 COLUMN DISPLAY ==-> |
+/* |                                 |
+/* |_________________________________|
+  
+@media screen and (min-width: 600px) and (max-width: 980px)
+  .x-sec
+    .et_pb_column_1_3, .et_pb_row.x-row-flex .et_pb_column.et_pb_column1_3
+      width: calc(33.333% - 14px) !important
+      margin-right: 20px !important
+      margin-bottom: 30px !important
+
+    .et_pb_column_1_3:last-child
+      margin-right: 0
+
+
+@media (max-width: 980px)
+  // body.woocommerce .x-sec .et_pb_row
+  //   width: 100%
+
+  #main-content .et_pb_shop.x-woo .woocommerce
+    > ul.products
+      display: flex
+      flex-flow: wrap row
+      margin: 0 auto
+
+      &.columns-1 li.product, 
+      &.columns-2 li.product, 
+      &.columns-3 li.product, 
+      &.columns-4 li.product, 
+      &.columns-5 li.product, 
+      &.columns-6 li.product
+        width: calc(33% - 34px) !important
+        margin: 2%
+        margin-right: 3% !important
+
+    ul.products.columns-4 li.product:nth-child(3n)
+      margin-right: 0 !important
+
+/* . <-== END 3 COLUMN DISPLAY ||
+
+/* ############################# 
+
+/* _________________________________
+/* |                               |
+/*!| -== WOO 2 COLUMN DISPLAY ==-> |
+/* |                               |
+/* |_______________________________|
+
+@media (max-width: 767px)
+  .et_pb_shop .woocommerce ul.products
+    display: flex
+    flex-flow: wrap row
+    justify-content: flex-start
+
+  #main-content .et_pb_shop.x-woo .woocommerce > ul.products
+    &.columns-1 li.product,
+    &.columns-2 li.product, 
+    &.columns-3 li.product, 
+    &.columns-4 li.product, 
+    &.columns-5 li.product, 
+    &.columns-6 li.product
+      width: calc(49% - 20px) !important
+      margin: 3% 10px !important
+      margin-right: 3% !important
+
+  .woocommerce-page ul.products li.product:nth-child(2n), 
+  #main-content .et_pb_shop.x-woo .woocommerce > ul.products.columns-4 li.product:nth-child(2n)
+    margin-right: 0px !important
+
+  .woocommerce-page ul.products li.product:nth-child(3n), 
+  #main-content .et_pb_shop.x-woo .woocommerce > ul.products.columns-4 li.product:nth-child(3n)
+    margin-right: 3% !important
+
+// @media screen and (max-width: 767px)
+//   body.woocommerce #main-content .x-sec .et_pb_row
+//     padding-left: 2% !important
+//     padding-right: 2% !important
+//     margin-left: 0 !important
+//     margin-right: 0 !important
+//     width: 100% !important
+
+@media screen and (max-width: 479px)
+  #main-content .et_pb_shop.x-woo .woocommerce > ul.products
+    &.columns-1 li.product, 
+    &.columns-2 li.product, 
+    &.columns-3 li.product, 
+    &.columns-4 li.product, 
+    &.columns-5 li.product, 
+    &.columns-6 li.product
+      width: calc(49% - 15px) !important
+      margin-right: 15px
+
+    &.columns-4 li.product
+      &:nth-child(3n)
+        margin-right: 10px !important
+
+      &:nth-child(2n)
+        margin-right: 0px !important
+
+  .woocommerce-page ul.products li.product:nth-child(3n),
+  #main-content .et_pb_shop.x-woo .woocommerce > ul.products.columns-4 li.product:nth-child(3n)
+    margin-right: 0% !important
+
+/* <-== END WOO COLUMN DISPLAY ==-||
+ . 
+ . #################################
+ .
+
+
+/* ___________________________
+/* |                         |
+/*!| -== 2 COLUMNs SWAP ==-> |
+/* |                         |
+/* |_________________________|
+
+@media screen and (max-width: 980px)
+  /*   .x-want-a-tap.x-swap-column .et_pb_row,
+   *.x-swap-column .et_pb_row {
+   *  display: flex;
+   *  flex-flow: column-reverse
+   *}
+
+  .x-want-a-tap.x-swap-column .et_pb_column
+    margin-bottom: 4%
+
+
+
+/*!| -== END 2 COLUMNs SWAP ==-> |
+/* ===============================
+
+
+/* ___________________________________________________
+/* |                                                 |
+/*!| === "PRODUCT SOURCE" POSITIONING ON IMAGES ===> |
+/* |                                                 |
+/* |_________________________________________________|
+.x-allergens
+  i
+    &.x-biodynamic-organic::before,
+    &.x-sustainable::before
+      margin-right: 10px
+      transform: translateY(10px)
+      background-size: 32px 32px
+      width: 32px
+      height: 32px
+      display: inline-block
+
+/* _____________________________________
+/* |                                   |
+/*!| ===    INFO BANNER SECTION    ==> |
+/* |                                   |
+/* |___________________________________|
+
+.et_pb_gutters4 .x-info-banner .et_pb_column_1_4,
+.x-info-banner .et_pb_gutters4.et_pb_row .et_pb_column_1_4
+  width: 100%
+
+.et-db #et-boc .et-l
+  .et_pb_gutters4 .x-info-banner .et_pb_column_1_4,
+  .x-info-banner .et_pb_gutters4.et_pb_row .et_pb_column_1_4
+    width: 100%
+
+
+
+@media screen and (max-width: 640px)
+
+  .et-db #et-boc .et-l
+    .x-info-banner
+      .x-grid
+        grid-template-columns: 1fr
+        
+        .et_pb_column
+          margin-bottom: 5%
+
+          &:last-child
+            margin-bottom: 7%
+
+/* _________________________________________
+/* |                                       |
+/*!| ===    FEATURES BANNER SECTION    ==> |
+/* |                                       |
+/* |_______________________________________|
+
+@media all and (min-width: 981px)
+  .x-features-banner .et_pb_gutters3
+    .et_pb_column_3_5,
+    &.et_pb_row .et_pb_column_3_5
+      width: 59.5%
+
+.x-features-banner
+  .et_pb_column
+    &.et-last-child
+      display: grid
+      gap: 10px
+      grid-template-columns: 1fr 1fr 1fr 1fr
+
+      .et_pb_blurb_content
+        max-width: 85%
+
+      .et_pb_blurb .et_pb_image_wrap
+        max-width: 80px
+
+// @media all and (max-width: 767px)
+//   .x-features-banner
+//     .et_pb_column,
+//     .et_pb_column_4_tb_body
+//       grid-template-columns: 1fr 1fr
+
+@media all and (max-width:480px)
+  .x-features-banner
+    .et_pb_column
+      &.et-last-child
+        grid-template-columns: 1fr 1fr
+
+
+/* _________________________________
+/* |                               |
+/*!| ===  SINGLE BLOG POSTS  ==>   |
+/* |                               |
+/* |_______________________________|
+
+/* _________________________________
+/* |                               |
+/*!| ===    COLUMN LAYOUT    ==>   |
+/* |_______________________________|
+
+
+@media (min-width:641px)
+  .single-post
+    .et_pb_row_inner.et_pb_equal_columns,
+    .et_pb_section.et_pb_equal_columns > .et_pb_row
+      // display: -webkit-box
+      // display: -ms-flexbox
+      display: flex
+
+.single-post .et_pb_column .x-row-posts.et_pb_row_inner
+  .x-col_1-posts
+    width: 25%
+
+  .x-col_2-posts
+    flex-grow: 1
+
+/* .x-grid-3 {
+ *  grid-template-columns: 1fr 1fr 1fr;
+ *  gap: 5% 4%;
+ *  width: 80%;
+ *  margin: 0 auto;
+ *  justify-content: space-between;
+ *}
+.et-db #et-boc .et-l .x-grid-3.x-ingredients,
+.x-grid-3.x-ingredients
+  gap: 5% 5%
+  width: 90%
+  margin: 0 auto
+  justify-content: space-between
+
+  .et_pb_row
+    /* border: 1px black solid;
+    border-radius: 20px
+    margin: 0 !important
+    padding: 0 !important
+    width: 100%
+    display: flex
+    gap: 3%
+    flex-flow: wrap row
+
+    .et_pb_column
+      margin: 0 !important
+      padding: 0 !important
+      flex-grow: 1
+
+      &:first-child
+        width: 35%
+
+    &.x-1-bottle .et_pb_column:first-child .et_pb_module
+      width: 68%
+      margin: 0 auto
+
+@media screen and (max-width: 980px)
+
+  .et-db #et-boc .et-l .x-grid-3.x-ingredients,
+  .x-grid-3.x-ingredients
+    .et_pb_column
+      &:first-child
+        flex: 1 1 0
+        display: flex
+        justify-content: center
+
+      &:last-child
+        flex: 2 2 0
+
+
+
+/* FOUND ALSO IN - SECTION
+.et_pb_gutters4, .et_pb_gutters4.et_pb_row
+  .x-grid-4.et_pb_column_4_4
+    .et_pb_widget,
+    .et_pb_grid_item
+      width: 100%
+    .et_pb_shop_grid
+      .woocommerce
+        ul.products
+          li.product
+            width: 100%
+
+@media all and (min-width: 320px)
+  .et_pb_gutters4 .x-grid-4.x-grid-2.et_pb_column_4_4 .et_pb_shop_grid .woocommerce ul.products li.product,
+  .et_pb_gutters4.et_pb_row .x-grid-4.x-grid-2.et_pb_column_4_4 .et_pb_shop_grid .woocommerce ul.products li.product
+    width: 100% !important
+
+  .x-grid-2 
+    grid-template-columns: 1fr 1fr
+    gap: 30px
+
+/* -------------------------------
+/*  - SINGLE POST -
+/*  INGREDIENT IMAGES / TEXT GRID
+/* -------------------------------
+
+.single-post
+  .x-ingredients.et_section_specialty
+    .et_pb_column
+      .et_pb_image
+        &.x-ingredient-image,
+        &:nth-of-type(3n+1)
+          max-width: 70px
+          margin-left: 20px !important
+          float: left
+
+        // &:nth-of-type(2)
+        //   margin-left: 0 !important
+
+.x-ingredients
+  .et_pb_column
+    .et_pb_image.x-ingredient-image::before
+      content: ' '
+      background-size: 24px 24px
+      background-repeat: no-repeat
+      display: inline-block
+      width: 24px
+      height: 24px
+      position: absolute
+      z-index: 9
+      right: -8px
+
+  .x-ingredient-image
+    &.x-biodynamic-organic,
+    &.x-sustainable
+      transform: translateY(0px)
+
+  span
+    &.x-sustainable::before,
+    &.x-biodynamic-organic::before
+      display: none
+
+// .single-post
+//   .x-ingredient-image
+//     &.x-biodynamic-organic,
+//     &.x-sustainable
+//       margin-left: 5px
+//       transform: translateY(7px)
+
+/* ______________________________________
+/* |                                    |
+/*!| ===    SINGLE PRODUCT PAGES    ==> |
+/* |                                    |
+/* |____________________________________|
+
+/* CLEANSE LEVEL BADGE POSITIONING
+
+.single-product .et_pb_section_first .et_pb_column
+  &:last-child
+    display: flex
+    flex-wrap: wrap
+    align-content: baseline
+
+    .et_pb_wc_title
+      flex: 1 1 75%
+
+  .et_pb_wc_price
+    flex-basis: 100%
+
+  &:last-child .x-badge
+    margin-top: -20px
+    flex: 1 1 25%
+    display: flex
+    align-content: center
+
+@media only screen and (min-width: 981px)
+  .et_pb_image_0_tb_body.x-badge
+    flex-basis: 20%
+
+@media all and (max-width: 767px)
+  .single-product
+    .et_pb_section_first
+      .et_pb_column:last-child
+        .et_pb_wc_title
+          // flex-basis: 150px
+
+        .x-badge
+          width: 20%
+          margin-top: -10px
+
+/* -------------------------------
+/*  - SINGLE PRODUCT - 
+/*  INGREDIENT IMAGES / TEXT GRID 
+/* -------------------------------
+.et-db #et-boc .et-l
+  .single-product
+    .x-grid-for-ingredients
+      .et_pb_column:last-child
+        display: grid
+        grid-template-areas: '. . .'
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: repeat(4, 80px 20px)
+        justify-content: center
+        align-items: center
+
+        .x-ingredient-text
+          align-content: start
+
+.x-grid-for-ingredients
+      .et_pb_column:last-child
+        display: grid
+        grid-template-areas: '. . .'
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: repeat(4, 80px 20px)
+        justify-content: center
+        align-items: center
+
+        .x-ingredient-text
+          align-content: start
+
+      // .x-ingredient-image
+      //   margin-bottom: 0
+@media screen and (max-width: 980px)
+  
+  .x-grid-for-ingredients
+    .et_pb_column
+        &:last-child
+          grid-template-rows: repeat(4, min-content)
+
+.et-db #et-boc .et-l
+  .single-product
+    .x-ingredients
+      .et_pb_column
+        .et_pb_image.x-ingredient-image
+          width: initial
+          width: 90%
+          margin: 0 auto
+
+          &:nth-of-type(3n+1)
+            margin-left: 0px !important
+
+.single-product
+  .x-ingredients
+    .et_pb_column
+      .et_pb_image.x-ingredient-image
+        width: initial
+        width: 90%
+        margin: 0 auto
+
+        &:nth-of-type(3n+1)
+          margin-left: 0px !important
+
+/* END INGREDIENT IMAGES / TEXT GRID 
+/* ==================================
+
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/*! -== END GLOBAL LAYOUT  ==-> 
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/* ############################

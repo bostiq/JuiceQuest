@@ -6,6 +6,18 @@
 
 ## Last changes:
 
+### 
+
+- Added sass partials for:
+- - Global Components
+- - Global layouts
+- - single prod template
+- - font (mostly for variable sizes)
+
+- New Footer Styles
+
+- New Grids and flex global declarations
+
 ### Wed May 28 13:31:31 2025
 #### Single Product Page changes
 

@@ -1,9 +1,111 @@
 @use 'colors.sass' as *
+@use 'sass:color'
 /* ========================
 /* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
 /*! -= GLOBAL COMPONENTS =-
 /* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
 /* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+
+/* ________________________________________
+/* |                                      |
+/*!| -==  TEMPORARY HIDDEN ELEMENT   ==-> |
+/* |                                      |
+/* |______________________________________|
+
+
+footer
+  #menu-fake-footer-menu-company,
+  #menu-fake-footer-menu-shop
+    visibility: hidden
+
+/* -------------------
+/* END HIDDEN ELEMENTS
+/* -------------------
+
+/* _____________________________________
+/* |                                   |
+/*!|   -==     MENU HEADER      ==->   |
+/* |                                   |
+/* |___________________________________|
+
+#main-header.et-fixed-header
+  #top-menu
+    li.current-menu-item > a
+      border-bottom: 3px solid $butterscotch
+
+
+/* ____________________________________
+/* |                                  |
+/*!| -==   MOBILE MENU HEADER    ==-> |
+/* |                                  |
+/* |__________________________________|
+
+@media screen and (max-width: 980px)
+  .et_fixed_nav #main-header, #main-header #mobile_menu
+    background-color: color.adjust($white, $alpha: -.1 )
+    position: fixed
+
+@media only screen and (min-width: 980px)
+  // .product-template-default #main-header, .woocommerce-checkout #main-header,
+  // .woocommerce-cart #main-header, .woocommerce-account #main-header
+  .product-template-default #main-header  
+    background-color: $hunter-green
+
+  .product-template-default .et-fixed-header
+    &#main-header
+      background-color: $hunter-green
+
+      .nav li ul
+        background-color: $hunter-green
+
+    .et-search-form
+      background-color: $hunter-green
+
+/*!` 27  MAY 2025 CHANGES
+  AMEND ABOVE CODE ONCE DONE
+  WHITE BACKGROUND HEADER 
+    SINGLE PRODUCT ONLY */
+
+@media screen and (max-width: 980px)
+  .product-template-default .et_fixed_nav #main-header, .product-template-default #main-header #mobile_menu
+    background-color: $white
+    position: fixed
+
+@media only screen and (min-width: 980px)
+  .product-template-default #main-header
+    background-color: $white
+
+    ul#top-menu
+        // background-color: $white
+        li, a
+          color: $hunter-green
+
+  .product-template-default .et-fixed-header
+    &#main-header
+      background-color: $white
+
+      ul#top-menu
+        background-color: $white
+        li, a
+          color: $hunter-green !important
+
+    .et-search-form
+      background-color: $white
+
+/* ____________________________________
+/* |                                  |
+/*!|  ===   PRODUCTS OVERLAY    ==->  |
+/* |                                  |
+/* |__________________________________|
+
+.et-db
+  #et-boc .et-l
+    .et_pb_image_sticky
+      display: revert
+  
+.et_overlay::before
+  font-size: 52px
+  text-shadow: 0 0 10px rgba(0,0,0,.5)
 
 /* ======================
 /* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
@@ -109,10 +211,21 @@
   .et-download::before
     content: "\e004"
 
-/*! - - Breacrumbs - -
+/* __________________________
+/* |                        |
+/*!| -==  BREADCRUMBS  ==-> |
+/* |                        |
+/* |________________________|
+
 .woocommerce-breadcrumb
   text-transform: uppercase
   font-weight: 500
+
+.woocommerce-breadcrumb a::after 
+  content: ' > '
+  display: inline-block
+  transform: translateY(-2px)
+  padding: 0 2px 0 7px
 
 /* ________________________
 /* |                      |
@@ -140,3 +253,236 @@
     background-color: $butterscotch !important
     transition: transform .1s ease
     transform: scale(1.1)
+
+
+/* __________________________
+/* |                        |
+/*!| -== TOGGLE CUSTOM ==-> |
+/* |                        |
+/* |________________________|
+
+.et_pb_accordion.x-toggle
+  .et_pb_toggle_title
+    margin-left: 5%
+
+.et_pb_accordion.x-toggle,
+.et_pb_accordion.x-toggle .et_pb_toggle_open
+  .et_pb_toggle_title
+    &::before
+
+      position: relative
+      left: -20px
+      top: 5px
+      width: 16px
+      height: 10px
+      display: inline-block
+      transform-origin: 10% 160%
+      transition: transform 400ms ease-in-out 0ms
+
+
+.et_pb_accordion.x-toggle
+  .et_pb_toggle_open
+    .et_pb_toggle_title
+      &::before 
+
+        transform: rotate(90deg)
+        transform-origin: 10% 160%
+        transition: transform 400ms ease-in-out 0ms
+
+
+/* __________________________________
+/* |                                 |
+/*!| -== DELIVERY CHECK SECTION ==-> |
+/* |                                 |
+/* |_________________________________|
+
+.x-delivery-check
+  min-width: 80%
+  max-width: 1280px !important
+  margin: 0 auto
+
+  .et_pb_blurb_content
+   
+    display: flex
+    align-items: center
+    flex-flow: row nowrap
+
+    > div
+      display: block
+      flex: 1 1 auto
+
+    .et_pb_main_blurb_image
+      width: 11%
+      flex-grow: 0
+      flex-basis: 100px
+      max-width: 11%
+      margin-bottom: 0px
+
+    img
+      max-width: 100%
+
+@media only screen and (max-width: 980px)
+  .x-delivery-check
+    width: 90%
+
+@media only screen and (max-width: 400px)
+  .x-delivery-check
+    width: 95%
+
+
+
+@media only screen and (max-width: 600px)
+  .x-delivery-check
+    padding-bottom: 2.5%
+
+    .et_pb_blurb_content
+      .wdap_product_availity_form
+        
+        #wdap_type_location
+          border-radius: 10px 10px 0 0 !important
+        
+        button
+          border-radius: 0 0 10px 10px !important
+
+/*! -= OFFSET FOR FORM ANCHOR =-
+
+#x-footer-target
+  position: absolute
+  margin-top: -100px
+  width: 0
+  height: 0
+
+#x-footer,
+#x-footer:target
+  position: relative
+
+  &::before
+    position: relative
+    display: block
+    content: " "
+    margin-top: -300px
+    padding-top: 300px
+
+/* ___________________________________
+/* |                                 |
+/*!| ===    SINGLE BLOG POSTS    ==> |
+/* |                                 |
+/* |_________________________________|
+
+/* SINGLE BLOG POSTS sidebar button
+
+.et_pb_sidebar_0_tb_body .woocommerce a.button
+  color: #fff
+
+/* SINGLE PRODUCTS AND BLOG COMPANY LOGO
+
+/* .post-template-default.single-post img#logo,
+ *.product-template-default img#logo {
+ *  content: url("/../../../../wp-content/uploads/2025/05/JQ_Logo_green_half_moon_w300.png");
+ *}
+
+
+@media (width > 980px)
+  .post-template-default.single-post, .page-template-default, .archive
+    .et-fixed-header
+      img#logo
+        content: url("/../../../../wp-content/uploads/2025/07/JQ-logo-no-arch-2024-white-w300.png")
+
+
+/* ____________________________________
+/* |                                  |
+/*!| === "PRODUCT SOURCE" BADGES ===> |
+/* |                                  |
+/* |__________________________________|
+
+.x-sustainable::before, .x-biodynamic-organic::before
+  content: ''
+  background-size: 32px 32px
+  background-repeat: no-repeat
+  display: inline-block
+  width: 32px
+  height: 32px
+
+.x-sustainable::before
+  background-image: url('/../../../../wp-content/uploads/2025/07/sustainable_fruit_badge.webp')
+
+.x-biodynamic-organic::before
+  background-image: url('/../../../../wp-content/uploads/2025/07/certified_organic_badge.webp')
+
+/* _____________________________________
+/* |                                   |
+/*!| ===    INFO BANNER SECTION    ==> |
+/* |                                   |
+/* |___________________________________|
+
+.et-db #et-boc .et-l
+  .x-info-banner
+    .et_pb_row.x-grid,
+    .et_pb_row
+      &::before,
+      &::after
+        content: ' ' !important
+        position: absolute
+        display: block
+        width: 90px
+        height: 90px
+        visibility: initial
+
+
+      &::after
+        background: url('/../../../../wp-content/uploads/2025/07/JQ-Orange-w300.png') no-repeat center (center / cover)
+        top: -5px
+        right: -9%
+
+      &::before
+        background: url('/../../../../wp-content/uploads/2025/07/JQ-Apple-w300.png') no-repeat center (center / cover)
+        top: 25px
+        left: -9%
+
+
+
+@media all and (max-width: 767px)
+  .x-info-banner
+    .et_pb_row.et_pb_equal_columns
+      &::before,
+      &::after
+        content: none
+        background-image: none
+
+/* ____________________________________
+/* |                                  |
+/*!| ===    REVIEW SLIDER DECO    ==> |
+/* |                                  |
+/* |__________________________________|
+
+.x-slider
+  overflow: visible
+
+  .et_pb_slide_content::before
+    content: "“"
+    position: relative
+    z-index: -1
+    left: -16%
+    color: rgba(255, 255, 255, 0.6)
+    font-size: 14em
+    font-family: Times,Garamond
+    font-weight: 900
+    display: block
+    width: 0px
+    height: 0px
+    transform: translateY(90px)
+
+/* ______________________________________
+/* |                                    |
+/*!| ===    SINGLE PRODUCT PAGES    ==> |
+/* |                                    |
+/* |____________________________________|
+
+
+
+
+
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/*! -= END GLOBAL COMPONENTS =-
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/* =============================
