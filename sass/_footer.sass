@@ -1,3 +1,5 @@
+@use 'sass:color'
+@use 'colors.sass' as *
 /* ===============================
 /* |˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
 /*!| ===    GLOBAL FOOTER    ==> 
@@ -257,25 +259,27 @@ footer
 /* -------------------
 /* FOOTER PAYMENTS ROW
 /* -------------------
+.et_pb_gutters2.et-db #et-boc .et-l,
+.et_pb_gutters3.et-db #et-boc .et-l,
+.et_pb_gutters4.et-db #et-boc .et-l
+  .x-global_footer--payments_row
+    .et_pb_column,
+    .et_pb_column_1_2
+      flex-flow: row nowrap
+      /*   justify-content: flex-start;
+      gap: 6%
 
-.x-global_footer--payments_row
-  .et_pb_column,
-  .et_pb_column_1_2
-    /*! flex-flow: row wrap;
-    /*   justify-content: flex-start;
-    gap: 6%
+      &.et-last-child
+        justify-content: flex-end
+        transform: translateY(-45px)
+        flex-direction: column
 
-    &.et-last-child
-      justify-content: flex-end
-      transform: translateY(-41px)
-      flex-direction: column
+      .et_pb_module
+        /*   max-width: 60px;
+        margin: 0
 
-    .et_pb_module
-      /*   max-width: 60px;
-      margin: 0
-
-  .et_pb_image
-    max-width: 60px
+    .et_pb_image
+      max-width: 60px
 
   
 
@@ -288,42 +292,84 @@ footer
         flex-direction: row
         gap: 4%
 
+/* -------------------
+/*    CONTACT FORM
+/* -------------------
+
+.et_pb_gutters2.et-db #et-boc .et-l,
+.et_pb_gutters3.et-db #et-boc .et-l,
+.et_pb_gutters4.et-db #et-boc .et-l
+  .x-global_footer--payments_row
+    .et_pb_column_1_2 .et_pb_module.x-code-module
+      margin-bottom: 4%
+
+      h4
+        color: $white
+        margin-bottom: 5px
+
+.et_pb_gutters2.et-db #et-boc .et-l,
+.et_pb_gutters3.et-db #et-boc .et-l,
+.et_pb_gutters4.et-db #et-boc .et-l
+  #omnisend-form-689c3a455793905f88b7c7df-field-container-62a3147776d81914aa87ed98-emailField-input.omnisend-form-689c3a455793905f88b7c7df-field-container-62a3147776d81914aa87ed98-input
+    font-family: DosisOmnisend, Helvetica Neue, Helvetica, Arial, sans-serif
+
+    &:focus
+        box-shadow: 0 0 0 2px $white inset, 0 0 0 4px $hunter-green inset
+
+
+#omnisend-form-689c3a455793905f88b7c7df-submit-form
+  .omnisend-form-689c3a455793905f88b7c7df-section-689c3708471a523c31f81d55,
+  omnisend-form-689c3a455793905f88b7c7df-field-container-62a3147776d81914aa87ed98,
+  #omnisend-form-689c3a455793905f88b7c7df-field-62a3147776d81914aa87ed98
+    padding: 0
+
+#omnisend-form-689c3a455793905f88b7c7df-submit-form
+  .omnisend-form-689c3a455793905f88b7c7df-action-container-627932485028ebd8c6660c51
+    position: absolute
+    right: 0
+    padding-top: 0
+    padding-bottom: 0
+    padding-left: 0
+    padding-right: 0
+
+  button#omnisend-form-689c3a455793905f88b7c7df-action-627932485028ebd8c6660c51.omnisend-form-689c3a455793905f88b7c7df-action-627932485028ebd8c6660c51
+    font-weight: bold
+    box-shadow: 0 5px 10px color.adjust($black, $alpha: -.7)
+    padding: 16px 22px
+    text-transform: uppercase
+    transition: background-color 300ms ease-in-out, font-weight 300ms ease-in-out, color 300ms ease-in-out
+
+    &:hover
+      
+      background-color: $butterscotch
+      color: $white
+      transition: background-color 300ms ease-in-out, font-weight 300ms ease-in-out, color 300ms ease-in-out
+
+@media screen and (max-width: 981px)
+  .x-global_footer--payments_row
+    display: flex
+    flex-direction: column-reverse
+
+  .et-db #et-boc .et-l .x-global_footer--payments_row .et-last-child
+    &.et_pb_column:last-child
+      flex-direction: column !important
+      margin-top: 4%
+      margin-bottom: 7%
+
+    > *
+      margin-left: auto !important
+      margin-right: auto !important
+
+@media screen and (max-width: 767px)
+  .et-db #et-boc .et-l .x-global_footer--payments_row .et-last-child > *
+    width: 100%
+
+
 /* CONTACT FORM
 
-.x-global-footer
-  #et_pb_contact_form_0 h4
-    text-align: center
-    padding-bottom: 24px
-
-  .et_contact_bottom_container
-    /* CONTACT FORM BUTTON
-    transform: translateY(-50px)
-
-  .et-pb-contact-message
-    p, ul
-      /* ERROR/MISSING MESSAGES
-      color: #000
-      background-color: #ea9940
-      font-weight: 500
-      padding: 2%
-      margin-bottom: 3%
-      border-radius: 10px
-
-    ul
-      /* ERROR/MISSING MESSAGES
-      padding-left: 30px
-
-@media all and (max-width: 767px)
-  /* CONTACT FORM BUTTON
-  .x-global-footer .et_contact_bottom_container
-    transform: translateY(-48px)
 
 
-// .x-global_footer--payments_row
-//   .x-form-notes
-//     .et_pb_text_inner
-//       text-align: center
-//       margin-top: -40px
+
 
 
 /* END GLOBAL FOOTER

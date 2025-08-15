@@ -253,12 +253,18 @@
 /* |                                   |
 /* |___________________________________|
 
+.et_pb_gutters2 .x-info-banner .et_pb_column_1_4,
+.et_pb_gutters3 .x-info-banner .et_pb_column_1_4,
 .et_pb_gutters4 .x-info-banner .et_pb_column_1_4,
 .x-info-banner .et_pb_gutters4.et_pb_row .et_pb_column_1_4
   width: 100%
 
 .et-db #et-boc .et-l
+  .et_pb_gutters2 .x-info-banner .et_pb_column_1_4,
+  .et_pb_gutters3 .x-info-banner .et_pb_column_1_4,
   .et_pb_gutters4 .x-info-banner .et_pb_column_1_4,
+  .x-info-banner .et_pb_gutters2.et_pb_row .et_pb_column_1_4,
+  .x-info-banner .et_pb_gutters3.et_pb_row .et_pb_column_1_4,
   .x-info-banner .et_pb_gutters4.et_pb_row .et_pb_column_1_4
     width: 100%
 
@@ -350,11 +356,14 @@
  *  justify-content: space-between;
  *}
 .et-db #et-boc .et-l .x-grid-3.x-ingredients,
-.x-grid-3.x-ingredients
-  gap: 5% 5%
+.et-db #et-boc .et-l .x-grid-4.x-ingredients,
+.x-grid-3.x-ingredients,
+.x-grid-4.x-ingredients
+  gap: 9% 2%
   width: 90%
   margin: 0 auto
   justify-content: space-between
+  align-items: flex-start
 
   .et_pb_row
     /* border: 1px black solid;
@@ -374,14 +383,16 @@
       &:first-child
         width: 35%
 
-    &.x-1-bottle .et_pb_column:first-child .et_pb_module
-      width: 68%
-      margin: 0 auto
+    &.x-1-bottle
+      .et_pb_column:first-child
+        .et_pb_module
+          width: 69%
+          margin: 0 auto !important
 
 @media screen and (max-width: 980px)
 
   .et-db #et-boc .et-l .x-grid-3.x-ingredients,
-  .x-grid-3.x-ingredients
+  .x-grid-3.x-ingredients, .x-grid-4.x-ingredients
     .et_pb_column
       &:first-child
         flex: 1 1 0
@@ -512,11 +523,12 @@
     .x-grid-for-ingredients
       .et_pb_column:last-child
         display: grid
-        grid-template-areas: '. . .'
-        grid-template-columns: repeat(3, 1fr)
-        grid-template-rows: repeat(4, 80px 20px)
+        grid-template-areas: '. .'
+        grid-template-columns: repeat(2, 1fr)
+        // grid-template-rows: repeat(4, 80px 20px)
         justify-content: center
-        align-items: center
+        align-content: flex-start
+        gap: 1% 4%
 
         .x-ingredient-text
           align-content: start
@@ -524,17 +536,33 @@
 .x-grid-for-ingredients
       .et_pb_column:last-child
         display: grid
-        grid-template-areas: '. . .'
-        grid-template-columns: repeat(3, 1fr)
-        grid-template-rows: repeat(4, 80px 20px)
+        grid-template-areas: '. .'
+        grid-template-columns: repeat(2, 1fr)
+        // grid-template-rows: repeat(4, 80px 20px)
         justify-content: center
-        align-items: center
+        align-content: flex-start
+        gap: 1% 4%
 
         .x-ingredient-text
           align-content: start
 
       // .x-ingredient-image
       //   margin-bottom: 0
+
+.x-ingredient-image
+  .et_pb_main_blurb_image
+    margin-bottom: 5px
+
+.x-grid-for-ingredients
+  .et_pb_blurb.x-ingredient-image
+    margin: 0
+    padding: 0
+
+    .et_pb_module_header
+      font-size: 14px
+
+
+
 @media screen and (max-width: 980px)
   
   .x-grid-for-ingredients

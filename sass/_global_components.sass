@@ -372,7 +372,7 @@ footer
 /* SINGLE BLOG POSTS sidebar button
 
 .et_pb_sidebar_0_tb_body .woocommerce a.button
-  color: #fff
+  color: $white
 
 /* SINGLE PRODUCTS AND BLOG COMPANY LOGO
 
@@ -395,19 +395,39 @@ footer
 /* |                                  |
 /* |__________________________________|
 
-.x-sustainable::before, .x-biodynamic-organic::before
-  content: ''
-  background-size: 32px 32px
-  background-repeat: no-repeat
-  display: inline-block
-  width: 32px
-  height: 32px
+.et_pb_image.x-sustainable, .et_pb_image.x-biodynamic-organic,
+i.x-sustainable, i.x-biodynamic-organic
+  &::before
+    content: ''
+    background-size: 32px 32px
+    background-repeat: no-repeat
+    display: inline-block
+    width: 32px
+    height: 32px
 
-.x-sustainable::before
-  background-image: url('/../../../../wp-content/uploads/2025/07/sustainable_fruit_badge.webp')
+.x-sustainable, .x-biodynamic-organic
+  .et_pb_blurb_content::before
+    content: ''
+    background-size: 26px 26px
+    background-repeat: no-repeat
+    display: inline-block
+    position: absolute
+    right: 0
+    top: 0
+    width: 26px
+    height: 26px
 
-.x-biodynamic-organic::before
-  background-image: url('/../../../../wp-content/uploads/2025/07/certified_organic_badge.webp')
+.et_pb_image.x-sustainable::before,
+i.x-sustainable::before,
+.x-sustainable .et_pb_blurb_content::before
+    background-image: url('/../../../../wp-content/uploads/2025/08/farming-classification-Sustainable-Farming100w.webp')
+    // https://juicequest.com.au/wp-content/uploads/2025/08/farming-classification-Sustainable-Farming100w.webp
+
+.et_pb_image.x-biodynamic-organic::before,
+i.x-biodynamic-organic::before,
+.x-biodynamic-organic .et_pb_blurb_content::before
+    background-image: url('/../../../../wp-content/uploads/2025/08/farming-classification-Organic-Biodynamic100w.webp')
+    // https://juicequest.com.au/wp-content/uploads/2025/08/farming-classification-Organic-Biodynamic100w.webp
 
 /* _____________________________________
 /* |                                   |
@@ -477,6 +497,8 @@ footer
 /*!| ===    SINGLE PRODUCT PAGES    ==> |
 /* |                                    |
 /* |____________________________________|
+
+
 
 
 
