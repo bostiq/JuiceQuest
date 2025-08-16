@@ -1359,7 +1359,7 @@ footer .x-logo-footer .et_pb_image_wrap {
   }
 }
 /* ------------------- */
-/*    CONTACT FORM */
+/* FOOTER CONTACT FORM */
 /* ------------------- */
 .et_pb_gutters2.et-db #et-boc .et-l .x-global_footer--payments_row .et_pb_column_1_2 .et_pb_module.x-code-module,
 .et_pb_gutters3.et-db #et-boc .et-l .x-global_footer--payments_row .et_pb_column_1_2 .et_pb_module.x-code-module,
@@ -1420,6 +1420,7 @@ footer .x-logo-footer .et_pb_image_wrap {
     flex-direction: column !important;
     margin-top: 4%;
     margin-bottom: 7%;
+    transform: revert;
   }
   .et-db #et-boc .et-l .x-global_footer--payments_row .et-last-child > * {
     margin-left: auto !important;
