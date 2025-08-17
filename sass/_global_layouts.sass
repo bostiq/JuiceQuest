@@ -90,6 +90,25 @@
 
   .x-grid-3
     grid-template-columns: 1fr
+
+/* -------------------------------
+/*  - X-INGREDIENT SECTION -
+/*            MOBILE
+/* -------------------------------
+
+@media screen and (max-width: 480px)
+  .et-db #et-boc .et-l
+    .x-grid-3.x-ingredients, .x-grid-4.x-ingredients
+      grid-template-columns: 1fr
+
+  .x-grid-3.x-ingredients, .x-grid-4.x-ingredients
+    grid-template-columns: 1fr
+
+
+/* ----------------------
+/*  - X-FLEX COLUMNS -
+/*            
+/* ----------------------
   
 
 .x-flex-columns
@@ -359,7 +378,7 @@
 .et-db #et-boc .et-l .x-grid-4.x-ingredients,
 .x-grid-3.x-ingredients,
 .x-grid-4.x-ingredients
-  gap: 9% 2%
+  gap: 50px 30px
   width: 90%
   margin: 0 auto
   justify-content: space-between
@@ -466,6 +485,34 @@
     &.x-biodynamic-organic::before
       display: none
 
+/* -------------------------------
+/*  - SINGLE POST IMAGEG -
+/*  MIGHT STILL BE RELEVANT FOR POSTS
+/* -------------------------------
+
+.et-db #et-boc .et-l
+  .single-product
+    .x-ingredients
+      .et_pb_column
+        .et_pb_image.x-ingredient-image
+          width: initial
+          width: 90%
+          margin: 0 auto
+
+          &:nth-of-type(3n+1)
+            margin-left: 0px !important
+
+.single-product
+  .x-ingredients
+    .et_pb_column
+      .et_pb_image.x-ingredient-image
+        width: initial
+        width: 90%
+        margin: 0 auto
+
+        &:nth-of-type(3n+1)
+          margin-left: 0px !important
+
 // .single-post
 //   .x-ingredient-image
 //     &.x-biodynamic-organic,
@@ -528,23 +575,23 @@
         // grid-template-rows: repeat(4, 80px 20px)
         justify-content: center
         align-content: flex-start
-        gap: 1% 4%
+        gap: 5px
 
         .x-ingredient-text
           align-content: start
 
 .x-grid-for-ingredients
-      .et_pb_column:last-child
-        display: grid
-        grid-template-areas: '. .'
-        grid-template-columns: repeat(2, 1fr)
-        // grid-template-rows: repeat(4, 80px 20px)
-        justify-content: center
-        align-content: flex-start
-        gap: 1% 4%
+  .et_pb_column:last-child
+    display: grid
+    grid-template-areas: '. .'
+    grid-template-columns: repeat(2, 1fr)
+    // grid-template-rows: repeat(4, 80px 20px)
+    justify-content: center
+    align-content: flex-start
+    gap: 5px
 
-        .x-ingredient-text
-          align-content: start
+    .x-ingredient-text
+      align-content: start
 
       // .x-ingredient-image
       //   margin-bottom: 0
@@ -563,12 +610,14 @@
 
 
 
-@media screen and (max-width: 980px)
+// @media screen and (max-width: 980px)
   
-  .x-grid-for-ingredients
-    .et_pb_column
-        &:last-child
-          grid-template-rows: repeat(4, min-content)
+//   .x-grid-for-ingredients
+//     .et_pb_column
+//         &:last-child
+//           grid-template-rows: repeat(4, min-content)
+
+
 
 .et-db #et-boc .et-l
   .single-product
