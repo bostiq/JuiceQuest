@@ -585,6 +585,9 @@
 .x-ingredient-image .et_pb_main_blurb_image {
   margin-bottom: 5px;
 }
+.x-ingredient-image .et_pb_blurb_container {
+  margin-top: -15px;
+}
 
 .x-grid-for-ingredients .et_pb_blurb.x-ingredient-image {
   margin: 0;
