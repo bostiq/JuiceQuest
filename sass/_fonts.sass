@@ -1,3 +1,5 @@
+@use 'colors.sass' as *
+@use 'sass:color'
 /* =======================
 /* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
 /*! --== FONT STYLES ==-- 
@@ -5,13 +7,20 @@
 /* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
   
 .home.page h1 
-  font-size: calc(8vw + 0.001em)
-  line-height: calc(9vw + 0.001em)
+  font-size: calc(9.5vw + .001em)
+  line-height: calc(13vw + .001em)
+
+
 
 @media screen and (min-width:981px)
 .home.page h1 
   font-size: calc(5vw + 0.001em)
   line-height: calc(6vw + 0.001em)
+
+@media screen and (max-width: 767px)
+  .home.page h1
+    font-size: calc(10vw + .001em)
+    line-height: calc(10vw + .001em)
 
 .x-ingredients h3
   font-size: 12px
@@ -19,34 +28,88 @@
 .single-post .x-ingredients h3
   font-size: revert
   
-
 /* OUTLINED FONTS
 
-.x-outline
-  h1 
-    -webkit-text-stroke: 3px
-    -webkit-text-stroke-color: rgba(255, 255, 255, 1)
-
-  p
-    -webkit-text-stroke: 2px
-    -webkit-text-stroke-color: rgba(255, 255, 255, 1)
+$outline-px: 2px
 
 
-@media screen and (max-width: 767px) 
+// .x-outline
+//   h1 
+//     -webkit-text-stroke: $outline-px
+//     -webkit-text-stroke-color: $white
 
-  .x-outline
-    h1
-      -webkit-text-stroke: 1.5px
-      -webkit-text-stroke-color: rgba(255, 255, 255, 1)
+//   p
+//     -webkit-text-stroke: calc($outline-px / 100 * 75)
+//     -webkit-text-stroke-color: $white
 
-    p
-      -webkit-text-stroke: 1px
-      -webkit-text-stroke-color: rgba(255, 255, 255, 1)
+
+//   @media screen and (max-width: 980px) 
+
+//     h1
+//       -webkit-text-stroke: calc($outline-px / 100 * 75)
+//       -webkit-text-stroke-color: $white
+//     p
+//       -webkit-text-stroke: calc($outline-px / 100 * 50)
+//       -webkit-text-stroke-color: $white
+
+
+//   @media screen and (max-width: 767px) 
+    
+//     h1
+//       -webkit-text-stroke: calc($outline-px / 100 * 50)
+//       -webkit-text-stroke-color: $white
+//     p
+//       -webkit-text-stroke: calc($outline-px / 100 * 30)
+//       -webkit-text-stroke-color: $white
   
 
 /* DECREASE WORD SPACE
-.x-wordspace
-  word-spacing: -7px
+.x-wordspace,
+.x-wordspace-10
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    word-spacing: -10px
+
+.x-wordspace-15
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    word-spacing: -15px
+
+.x-wordspace-20
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    word-spacing: -20px
+
+.x-wordspace-25
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    word-spacing: -25px
+
+.x-wordspace-30
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    word-spacing: -30px
+
 
 /* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
 /*! END FONTS styles ---

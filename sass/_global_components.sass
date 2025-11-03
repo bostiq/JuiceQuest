@@ -6,21 +6,6 @@
 /* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
 /* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
 
-/* ________________________________________
-/* |                                      |
-/*!| -==  TEMPORARY HIDDEN ELEMENT   ==-> |
-/* |                                      |
-/* |______________________________________|
-
-
-footer
-  #menu-fake-footer-menu-company,
-  #menu-fake-footer-menu-shop
-    visibility: hidden
-
-/* -------------------
-/* END HIDDEN ELEMENTS
-/* -------------------
 
 /* _____________________________________
 /* |                                   |
@@ -61,13 +46,14 @@ footer
     .et-search-form
       background-color: $hunter-green
 
-/*!` 27  MAY 2025 CHANGES
-  AMEND ABOVE CODE ONCE DONE
-  WHITE BACKGROUND HEADER 
-    SINGLE PRODUCT ONLY */
+/*! 27  MAY 2025 CHANGES
+ * AMEND ABOVE CODE ONCE DONE
+ * WHITE BACKGROUND HEADER
+ * SINGLE PRODUCT ONLY
 
 @media screen and (max-width: 980px)
-  .product-template-default .et_fixed_nav #main-header, .product-template-default #main-header #mobile_menu
+  .product-template-default .et_fixed_nav #main-header,
+  .product-template-default #main-header #mobile_menu
     background-color: $white
     position: fixed
 
@@ -119,8 +105,8 @@ footer
 //     border-color:  $yellow-green !important
   
 /*  =========================
-/*! ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
-  . --= SECTION CLASSES =--
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/*!  . --= SECTION CLASSES =--
 /* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
 /* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
 // @media screen and (max-width: 480px)
@@ -130,9 +116,9 @@ footer
 
 /*! EMPTY */
 
-/* . ==================
-/*! ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
-  . --= BUTTONS =--
+/* ==================
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/*! --= BUTTONS =--
 /* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
 /* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
 .et_divi_theme .et_pb_button
@@ -232,12 +218,29 @@ footer
 /*!| -== FORM STYLES ==-> |
 /* |                      |
 /* |______________________|
+.et_pb_contact_form_container
+  &.et_pb_contact_form_0
+    input,
+    textarea.et_pb_contact_message
+      border: 2px solid $trans-w
 
-.et_pb_contact_form_0
-  input:focus, textarea.et_pb_contact_message:focus
-    border: 2px solid $yellow-green
-    border-radius: 15px
-    background-color: $white
+.et_pb_contact_form_container
+  &.et_pb_contact_form_0
+    input:focus,
+    textarea.et_pb_contact_message:focus
+      // border: 2px solid $yellow-green
+      border-color: $yellow-green
+      border-radius: 15px
+      background-color: $white
+      transition-property: background-color, border
+      transition-delay: 0
+      transition-duration: 200ms
+      transition-timing-function: ease-in-out
+
+
+  input.et_pb_contact_captcha
+    background-color: color.adjust($yellow-green, $alpha: -.8)
+    border-radius: 10px
 /* _______________________________
 /* |                             |
 /*!| -== SOCIAL MEDIA ICONS ==-> |
@@ -491,6 +494,86 @@ i.x-biodynamic-organic::before,
     width: 0px
     height: 0px
     transform: translateY(90px)
+
+/* ______________________________________
+/* |                                    |
+/*!| ===      ENJOY US SECTION      ==> |
+/* |                                    |
+/* |____________________________________|
+
+/* ==================================
+/* ===   ENJOY US INLINE BUTTONS   ==
+/* ==================================
+
+.x-enjoy
+  .et_pb_button_module_wrapper
+    &:has(.x-buttons-modules-inline)
+      display: inline-block
+
+/* _______________________________________
+/* |                                     |
+/*!| ===    FOOTER / YOUR ACCOUNT    ==> |
+/* |                                     |
+/* |_____________________________________|
+
+/* -------------------------------
+/* BACKGROUND DECORATION
+/* -------------------------------
+.x-wooaccount-page,
+.x-global-footer
+  overflow: hidden
+
+  &:before, &:after
+    position: absolute
+    display: block
+    content: ''
+    background-image: url('https://juicequest.com.au/wp-content/uploads/2025/08/pattern-500w.svg')
+    top: 0
+    width: 700px
+    height: 1000px
+    z-index: 0
+    opacity: .7
+
+  &:before
+    left: -350px
+    transform: rotate(-20deg)
+
+  &:after
+    right: -350px
+    transform: rotate(20deg)
+
+.x-wooaccount-page
+  &::before,
+  &::after
+    width: 1000px
+    height: 120%
+    opacity: .15  
+    
+/* Media Queries
+
+@media screen and (max-width: 980px)
+  .x-global-footer
+    &::before
+      height: 1500px
+      left: -350px
+
+    &::after
+      height: 1500px
+      right: -400px
+
+@media screen and (max-width: 767px)
+  .x-global-footer
+    &::before, &::after
+      height: 1500px
+
+    &::before
+      left: -450px
+      transform: rotate(0deg)
+      transform: rotate3d(180deg)
+
+    &::after
+      right: -550px
+      transform: revert
 
 /* ______________________________________
 /* |                                    |

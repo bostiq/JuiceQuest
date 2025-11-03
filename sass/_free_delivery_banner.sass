@@ -1,0 +1,139 @@
+@use 'colors' as *
+@use 'sass:color'
+
+/* ____________________________________
+/* |                                  |
+/*!| -==  FREE DELIVERY BANNER   ==-> |
+/* |                                  |
+/* |__________________________________|
+
+// Making the content area flex to align items
+.x-free-delivery
+  .et_pb_column
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 0 !important
+
+  // Setting counter size, growth, and padding
+  .x-free-delivery-counter.et_pb_no_bg
+    flex: 1 0 160px
+    padding-top: 7px
+
+//Keep elements inline
+.x-free-delivery-blurb
+  .x-free-delivery-message,
+  .x-free-delivery-box,
+  .x-free-delivery-text
+    display: inline-block
+
+  // Message elements to flex, horizontal alignment
+  .x-free-delivery-message
+    display: flex
+    align-items: center
+
+  // "FREE DELIVERY" message
+  .x-free-delivery-box
+    background-color: $yellow-green
+    padding: 10px 15px 6px
+    color: $white
+    border-radius: 10px
+    margin-right: 10px
+
+  // truck icon
+  .x-free-delivery-icon
+    color: $white !important
+    margin-right: 7px
+    font-weight: 100
+    font-family: FontAwesome !important
+
+  // The rest on the message vertical adjustment
+  .x-free-delivery-text
+    transform: translatey(-5px)
+
+  // Blurb block size and growth
+  margin: 0 !important
+  flex: 1 1 auto
+
+.x-free-delivery
+  .et_pb_blurb
+
+    // padidng reset
+    .et_pb_blurb_container
+      padding-left: 0
+      
+    // Flex inside blurb block to set the flow
+    // For description elements "green box" and "message"
+    .et_pb_blurb_description
+      display: flex
+      flex-flow: row wrap
+      justify-content: flex-start
+  
+
+@media screen and (max-width: 980px)
+  .x-free-delivery
+    .et_pb_blurb
+      font-size: 1rem
+
+    // Reset margins and paddings upon resize
+    &.et_pb_blurb.et_pb_module
+      margin: 0 auto !important
+      padding-right: 0 !important
+
+@media screen and (max-width: 600px)
+  // Align center everything
+  .x-free-delivery
+    text-align: center
+    
+    .et_pb_column
+      flex-flow: column wrap
+
+    // Align center everything
+    .x-free-delivery-message,
+    .x-free-delivery-box,
+    .et_pb_countdown_timer_container
+      text-align: center !important
+
+    // Shrink Paddings
+    .x-free-delivery-box
+      // display: block
+      padding: 5px 15px 3px
+
+    .x-free-delivery-message
+      font-size: 0.925rem
+
+    // Counter size and padding adjustments
+    .x-free-delivery-counter.et_pb_no_bg
+      flex: 1 1 auto
+      width: 300px
+      padding-top: 0 !important
+
+      &.et_pb_countdown_timer
+        .section
+
+          // Shrink font sizes
+          p.label
+            font-size: 0.7rem !important
+            line-height: .9rem !important
+
+    .et_pb_blurb
+      .et_pb_blurb_description
+        justify-content: center
+
+        .x-free-delivery-box
+          font-size: 1rem
+          font-weight: 500
+        
+
+    .x-free-delivery-icon
+      font-size: 1.25rem !important
+
+    .x-free-delivery-text
+      transform: translateY(-3px)
+
+    .values 
+      line-height: 1rem
+
+
+/* | -==  END FREE DELIVERY BANNER   ==-> |
+/* |######################################|

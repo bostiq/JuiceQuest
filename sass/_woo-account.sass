@@ -1,0 +1,96 @@
+@use 'sass:color'
+@use "colors.sass" as *
+/* ===========================
+/*! ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/*| === WOO My Account ==->
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/* . Adjust Welcome message
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+      
+
+.et_pb_text_inner .woocommerce-MyAccount-navigation li
+  list-style: none
+  background-color: $hunter-green
+  color: $yellow-green 
+  border-radius: 10px
+  margin-bottom: 10px 
+  padding-bottom: 1%
+  width: 100%
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out
+
+.woocommerce-MyAccount-navigation li
+  a
+    color: $acid
+    display: block
+    font-size: 1.2em
+    font-weight: 700
+    padding: .6em 1.6em
+    transition: color 0.4s ease-in-out
+
+  &:hover
+    background-color: $acid
+    transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out
+
+    a
+      color: $hunter-green
+      transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out
+
+// Account Buttons
+
+.woocommerce,
+.woocommerce-cart,
+.woocommerce-page
+  
+  a.woocommerce-button,
+  a.button,
+  button.button,
+  .woocommerce-button.button
+    margin: 2% 0 !important
+    margin-right: 5px !important
+    padding: 1px 15px 5px !important
+
+body.woocommerce #page-container .et_pb_section .et_pb_wc_cart_totals_0_tb_body a.checkout-button.button, .et_pb_wc_cart_totals_0_tb_body button.button
+  margin: 2% 0 !important
+  margin-right: 5px !important
+  padding: 1px 15px 5px !important 
+
+// Layout Adjustments
+
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙  
+/* . Adjust Account menu
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+/* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙
+
+@media only screen and (min-width: 981px)
+  .woocommerce
+    .woocommerce-MyAccount-navigation
+      float: left
+      width: 30%
+  
+    .woocommerce-MyAccount-content
+      float: right
+      width: 68%
+
+@media only screen and (max-width: 980px)
+  .woocommerce
+    .woocommerce-MyAccount-navigation, .woocommerce-MyAccount-content
+      float: none !important
+      width: 100% !important
+
+    .woocommerce-MyAccount-navigation
+      ul
+        padding: 20px 0 0px 0em
+
+@media only screen and (max-width: 767px)
+  .x-sec
+    .et_pb_column_4_4
+      .et_pb_module .woocommerce
+        display: flex
+        flex-direction: column-reverse
+
+
+/* . =======================
+/* . ___ END WOO My Account
+/* .
