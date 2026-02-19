@@ -37,18 +37,19 @@
 /* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙ */
 /* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙ */
 .home.page h1 {
-  font-size: calc(9.5vw + 0.001em);
-  line-height: calc(13vw + 0.001em);
-}
-
-.home.page h1 {
   font-size: calc(5vw + 0.001em);
   line-height: calc(6vw + 0.001em);
 }
 
+@media screen and (max-width: 980px) {
+  .home.page h1 {
+    font-size: calc(5vw + 0.001em);
+    line-height: calc(6vw + 0.001em);
+  }
+}
 @media screen and (max-width: 767px) {
   .home.page h1 {
-    font-size: calc(10vw + 0.001em);
+    font-size: calc(9vw + 0.001em);
     line-height: calc(10vw + 0.001em);
   }
 }
@@ -131,6 +132,13 @@
 .x-sec.et_pb_section_first.et_pb_section,
 .et_pb_section:nth-child(1) {
   padding-top: 173px !important;
+}
+@media screen and (max-width: 480px) {
+  #page-container,
+  .x-sec.et_pb_section_first.et_pb_section,
+  .et_pb_section:nth-child(1) {
+    padding-top: 110px !important;
+  }
 }
 
 header#main-header {
@@ -797,10 +805,9 @@ footer.et-l.et-l--footer .et_pb_section_0_tb_footer.et_pb_section {
 .et-db #et-boc .et-l .et_pb_image_sticky {
   display: revert;
 }
-
-.et_overlay::before {
-  font-size: 52px;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+.et-db #et-boc .et-l .et_overlay::before {
+  font-size: 52px !important;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
 }
 
 /* ====================== */
@@ -1310,6 +1317,12 @@ body.woocommerce #page-container .et_pb_section .et_pb_wc_cart_totals_0_tb_body 
   margin: 2% 0 !important;
   margin-right: 5px !important;
   padding: 1px 15px 5px !important;
+}
+
+.woocommerce a.button.alt::after, .woocommerce-page a.button.alt::after, .woocommerce button.button.alt::after, .woocommerce-page button.button.alt::after, .woocommerce input.button.alt::after, .woocommerce-page input.button.alt::after, .woocommerce #respond input#submit.alt::after, .woocommerce-page #respond input#submit.alt::after, .woocommerce #content input.button.alt::after, .woocommerce-page #content input.button.alt::after, .woocommerce a.button::after, .woocommerce-page a.button::after, .woocommerce button.button:not(.button-confirm)::after, .woocommerce-page button.button:not(.button-confirm)::after, .woocommerce input.button::after, .woocommerce-page input.button::after, .woocommerce #respond input#submit::after, .woocommerce-page #respond input#submit::after, .woocommerce #content input.button::after, .woocommerce-page #content input.button::after, .woocommerce a.button::before, .woocommerce-page a.button::before, .woocommerce button.button::before, .woocommerce-page button.button::before, .woocommerce input.button::before, .woocommerce-page input.button::before, .woocommerce #respond input#submit::before, .woocommerce-page #respond input#submit::before, .woocommerce #content input.button::before, .woocommerce-page #content input.button::before {
+  position: relative !important;
+  display: inline-block !important;
+  transform: translateY(5px) !important;
 }
 
 /* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙   */
