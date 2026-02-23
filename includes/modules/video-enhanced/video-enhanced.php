@@ -6,6 +6,13 @@ class ET_Builder_Module_Video_Enhanced extends ET_Builder_Module {
 		$this->plural     = esc_html__( 'Videos Enhanced', 'et_builder' );
 		$this->slug       = 'et_pb_video_enhanced';
 		$this->vb_support = 'on';
+		
+		// Module icon and category
+		$this->icon_path = false;
+		$this->icon = '&#xE023;'; // Play button icon
+		$this->main_css_element = '%%order_class%%';
+		$this->type = 'general';
+		$this->child_title_var = 'admin_label';
 
 		$this->settings_modal_toggles = array(
 			'general'  => array(
@@ -221,6 +228,12 @@ class ET_Builder_Module_Video_Enhanced extends ET_Builder_Module {
 				'toggle_slug'     => 'video_meta',
 				'description'     => esc_html__( 'Display the file name of the video.', 'et_builder' ),
 			),
+			'admin_label' => array(
+				'label'       => esc_html__( 'Admin Label', 'et_builder' ),
+				'type'        => 'text',
+				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'et_builder' ),
+				'toggle_slug' => 'main_content',
+			),
 
 		);
 		return $fields;
@@ -391,12 +404,12 @@ class ET_Builder_Module_Video_Enhanced extends ET_Builder_Module {
 		$play_icon_color       = $this->props['play_icon_color'];
 		$play_icon_color_hover = $this->get_hover_value( 'play_icon_color' );
 		
-		// Video metadata options
-		$show_duration    = $this->props['show_duration'];
-		$show_file_type   = $this->props['show_file_type'];
-		$show_file_size   = $this->props['show_file_size'];
-		$show_dimensions  = $this->props['show_dimensions'];
-		$show_file_name   = $this->props['show_file_name'];
+		// Video metadata options - ensure defaults
+		$show_duration    = isset( $this->props['show_duration'] ) ? $this->props['show_duration'] : 'off';
+		$show_file_type   = isset( $this->props['show_file_type'] ) ? $this->props['show_file_type'] : 'off';
+		$show_file_size   = isset( $this->props['show_file_size'] ) ? $this->props['show_file_size'] : 'off';
+		$show_dimensions  = isset( $this->props['show_dimensions'] ) ? $this->props['show_dimensions'] : 'off';
+		$show_file_name   = isset( $this->props['show_file_name'] ) ? $this->props['show_file_name'] : 'off';
 
 		$video_src       = self::get_video( array(
 			'src'      => $src,
@@ -411,32 +424,47 @@ class ET_Builder_Module_Video_Enhanced extends ET_Builder_Module {
 		$video_metadata = '';
 		if ( 'on' === $show_duration || 'on' === $show_file_type || 'on' === $show_file_size || 'on' === $show_dimensions || 'on' === $show_file_name ) {
 			$primary_video_url = ! empty( $src ) ? $src : $src_webm;
-			$metadata = self::get_video_metadata( $primary_video_url );
 			
-			$meta_items = array();
+			// Debug: Add a simple test first
+			if ( ! empty( $primary_video_url ) ) {
+				$metadata = self::get_video_metadata( $primary_video_url );
+				
+				$meta_items = array();
 
-      if ( 'on' === $show_file_name && ! empty( $metadata['file_name'] ) ) {
-				$meta_items[] = '<span class="video-meta-filename"><strong>File Name:</strong> ' . esc_html( $metadata['file_name'] ) . '</span>';
-			}
-			
-			if ( 'on' === $show_duration && ! empty( $metadata['duration'] ) ) {
-				$meta_items[] = '<span class="video-meta-duration"><strong>Duration:</strong> ' . esc_html( $metadata['duration'] ) . '</span>';
-			}
-			
-			if ( 'on' === $show_file_type && ! empty( $metadata['file_type'] ) ) {
-				$meta_items[] = '<span class="video-meta-type"><strong>Format:</strong> ' . esc_html( $metadata['file_type'] ) . '</span>';
-			}
-			
-			if ( 'on' === $show_file_size && ! empty( $metadata['file_size'] ) ) {
-				$meta_items[] = '<span class="video-meta-size"><strong>Size:</strong> ' . esc_html( $metadata['file_size'] ) . '</span>';
-			}
-			
-			if ( 'on' === $show_dimensions && ! empty( $metadata['dimensions'] ) ) {
-				$meta_items[] = '<span class="video-meta-dimensions"><strong>Dimensions:</strong> ' . esc_html( $metadata['dimensions'] ) . '</span>';
-			}
-			
-			if ( ! empty( $meta_items ) ) {
-				$video_metadata = '<div class="et_pb_video_metadata">' . implode( ' | ', $meta_items ) . '</div>';
+				if ( 'on' === $show_file_name ) {
+					$file_name = ! empty( $metadata['file_name'] ) ? $metadata['file_name'] : basename( parse_url( $primary_video_url, PHP_URL_PATH ) );
+					if ( ! empty( $file_name ) ) {
+						$meta_items[] = '<span class="video-meta-filename"><strong>File Name:</strong> ' . esc_html( $file_name ) . '</span>';
+					}
+				}
+				
+				if ( 'on' === $show_duration && ! empty( $metadata['duration'] ) ) {
+					$meta_items[] = '<span class="video-meta-duration"><strong>Duration:</strong> ' . esc_html( $metadata['duration'] ) . '</span>';
+				}
+				
+				if ( 'on' === $show_file_type ) {
+					$file_type = ! empty( $metadata['file_type'] ) ? $metadata['file_type'] : strtoupper( pathinfo( parse_url( $primary_video_url, PHP_URL_PATH ), PATHINFO_EXTENSION ) );
+					if ( ! empty( $file_type ) ) {
+						$meta_items[] = '<span class="video-meta-type"><strong>Format:</strong> ' . esc_html( $file_type ) . '</span>';
+					}
+				}
+				
+				if ( 'on' === $show_file_size && ! empty( $metadata['file_size'] ) ) {
+					$meta_items[] = '<span class="video-meta-size"><strong>Size:</strong> ' . esc_html( $metadata['file_size'] ) . '</span>';
+				}
+				
+				if ( 'on' === $show_dimensions && ! empty( $metadata['dimensions'] ) ) {
+					$meta_items[] = '<span class="video-meta-dimensions"><strong>Dimensions:</strong> ' . esc_html( $metadata['dimensions'] ) . '</span>';
+				}
+				
+				if ( ! empty( $meta_items ) ) {
+					$video_metadata = '<div class="et_pb_video_metadata" style="margin-top: 15px; padding: 10px; font-size: 14px; line-height: 1.6;">' . implode( '<br>', $meta_items ) . '</div>';
+				}
+			} else {
+				// Show debug info if no video URL
+				if ( 'on' === $show_file_name ) {
+					$video_metadata = '<div class="et_pb_video_metadata" style="margin-top: 10px; padding: 10px; font-size: 14px; color: #cc0000;">No video URL provided for metadata extraction.</div>';
+				}
 			}
 		}
 
@@ -463,19 +491,63 @@ class ET_Builder_Module_Video_Enhanced extends ET_Builder_Module {
 			) );
 		}
 
+		// Create a grid layout to properly separate video/overlay from metadata
+		ET_Builder_Element::set_style( $render_slug, array(
+			'selector' => '%%order_class%% .et_pb_module_inner',
+			'declaration' => '
+				display: grid;
+				grid-template-rows: auto auto;
+				gap: 0;
+			',
+		) );
+
+		// Video box and overlay both go in the first grid cell
+		ET_Builder_Element::set_style( $render_slug, array(
+			'selector' => '%%order_class%% .et_pb_video_box, %%order_class%% .et_pb_video_overlay',
+			'declaration' => '
+				grid-row: 1;
+				grid-column: 1;
+			',
+		) );
+
+		// Video box needs relative positioning for the overlay
+		ET_Builder_Element::set_style( $render_slug, array(
+			'selector' => '%%order_class%% .et_pb_video_box',
+			'declaration' => 'position: relative;',
+		) );
+
+		// Metadata goes in the second grid row
+		ET_Builder_Element::set_style( $render_slug, array(
+			'selector' => '%%order_class%% .et_pb_video_metadata',
+			'declaration' => '
+				grid-row: 2;
+				grid-column: 1;
+			',
+		) );
+
+		// Override default Divi video overlay positioning for our enhanced module
+		ET_Builder_Element::set_style( $render_slug, array(
+			'selector' => '%%order_class%% .et_pb_video_overlay, %%order_class%% .et_pb_video_overlay .et_pb_video_overlay_hover',
+			'declaration' => '
+				position: static;
+				height: auto;
+				width: auto;
+				grid-row: 1;
+				grid-column: 1;
+			',
+		) );
+
 		$output = sprintf(
-			'<div%2$s class="%3$s">
-				%6$s
-				%5$s
-				<div class="et_pb_video_box">
-					%1$s
-				</div>
-				%7$s
-				%4$s
-			</div>',
+			'%1$s
+			%2$s
+			<div class="et_pb_video_box">
+				%3$s
+			</div>
+			%4$s
+			%5$s',
+			$parallax_image_background,
+			$video_background,
 			( '' !== $video_src ? $video_src : '' ),
-			$this->module_id(),
-			$this->module_classname( $render_slug ),
 			( '' !== $image_output
 				? sprintf(
 					'<div class="et_pb_video_overlay" style="background-image: url(%1$s);">
@@ -487,8 +559,6 @@ class ET_Builder_Module_Video_Enhanced extends ET_Builder_Module {
 				)
 				: ''
 			),
-			$video_background,
-			$parallax_image_background,
 			$video_metadata
 		);
 
