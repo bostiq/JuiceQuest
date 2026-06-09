@@ -478,7 +478,6 @@ footer.et-l.et-l--footer .et_pb_section_0_tb_footer.et_pb_section {
 .x-grid-3.x-ingredients,
 .x-grid-4.x-ingredients {
   gap: 50px 30px;
-  width: 90%;
   margin: 0 auto;
   justify-content: space-between;
   align-items: flex-start;
@@ -506,12 +505,12 @@ footer.et-l.et-l--footer .et_pb_section_0_tb_footer.et_pb_section {
 .x-grid-4.x-ingredients .et_pb_row.x-merch {
   /* border: 1px black solid; */
   border-radius: 0px;
-  margin: 0 !important;
   padding: 0 !important;
-  width: 100%;
   display: flex;
   gap: 5px;
   flex-flow: wrap row;
+  height: 100%;
+  width: 100%;
 }
 .et-db #et-boc .et-l .x-grid-3.x-ingredients .et_pb_row.x-grid-for-ingredients .et_pb_column,
 .et-db #et-boc .et-l .x-grid-3.x-ingredients .et_pb_row.x-merch .et_pb_column,
@@ -990,8 +989,6 @@ footer.et-l.et-l--footer .et_pb_section_0_tb_footer.et_pb_section {
 /* |                                 | */
 /* |_________________________________| */
 .x-delivery-check {
-  min-width: 80%;
-  max-width: 1280px !important;
   margin: 0 auto;
 }
 .x-delivery-check .et_pb_blurb_content {
@@ -1320,7 +1317,32 @@ body.woocommerce #page-container .et_pb_section .et_pb_wc_cart_totals_0_tb_body 
   padding: 1px 15px 5px !important;
 }
 
-.woocommerce a.button.alt::after, .woocommerce-page a.button.alt::after, .woocommerce button.button.alt::after, .woocommerce-page button.button.alt::after, .woocommerce input.button.alt::after, .woocommerce-page input.button.alt::after, .woocommerce #respond input#submit.alt::after, .woocommerce-page #respond input#submit.alt::after, .woocommerce #content input.button.alt::after, .woocommerce-page #content input.button.alt::after, .woocommerce a.button::after, .woocommerce-page a.button::after, .woocommerce button.button:not(.button-confirm)::after, .woocommerce-page button.button:not(.button-confirm)::after, .woocommerce input.button::after, .woocommerce-page input.button::after, .woocommerce #respond input#submit::after, .woocommerce-page #respond input#submit::after, .woocommerce #content input.button::after, .woocommerce-page #content input.button::after, .woocommerce a.button::before, .woocommerce-page a.button::before, .woocommerce button.button::before, .woocommerce-page button.button::before, .woocommerce input.button::before, .woocommerce-page input.button::before, .woocommerce #respond input#submit::before, .woocommerce-page #respond input#submit::before, .woocommerce #content input.button::before, .woocommerce-page #content input.button::before {
+.woocommerce a.button.alt::after,
+.woocommerce-page a.button.alt::after,
+.woocommerce input.button.alt::after,
+.woocommerce-page input.button.alt::after,
+.woocommerce #respond input#submit.alt::after,
+.woocommerce-page #respond input#submit.alt::after,
+.woocommerce #content input.button.alt::after,
+.woocommerce-page #content input.button.alt::after,
+.woocommerce a.button::after,
+.woocommerce-page a.button::after,
+.woocommerce input.button::after,
+.woocommerce-page input.button::after,
+.woocommerce #respond input#submit::after,
+.woocommerce-page #respond input#submit::after,
+.woocommerce #content input.button::after,
+.woocommerce-page #content input.button::after,
+.woocommerce a.button::before,
+.woocommerce-page a.button::before,
+.woocommerce button.button::before,
+.woocommerce-page button.button::before,
+.woocommerce input.button::before,
+.woocommerce-page input.button::before,
+.woocommerce #respond input#submit::before,
+.woocommerce-page #respond input#submit::before,
+.woocommerce #content input.button::before,
+.woocommerce-page #content input.button::before {
   display: inline-block !important;
   transform: translateY(5px) !important;
 }
@@ -1500,6 +1522,7 @@ body.woocommerce #page-container .et_pb_section .et_pb_wc_cart_totals_0_tb_body 
   margin-left: 10px;
   margin-top: 0 !important;
   font-weight: 700;
+  display: none !important;
 }
 
 .single_variation_wrap .wps_sfw_inner_description {
@@ -1507,6 +1530,16 @@ body.woocommerce #page-container .et_pb_section .et_pb_wc_cart_totals_0_tb_body 
   font-size: 0.8em;
 }
 
+@media screen and (max-width: 767px) {
+  .single-product .variations_form .cfvsw-swatches-container {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+  }
+  .single-product .variations_form .cfvsw-label-option {
+    padding: 0.7em;
+  }
+}
 /* . */
 /* . */
 /* . == END SINGLE-PRODUCT PAGE MODS. */

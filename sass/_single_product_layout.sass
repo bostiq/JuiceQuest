@@ -36,13 +36,25 @@
       margin-left: 10px
       margin-top: 0 !important
       font-weight: 700
+      display: none !important
 
 .single_variation_wrap
   .wps_sfw_inner_description
     color: $hunter-green
     font-size: 0.8em
 
+@media screen and (max-width: 767px)
+  
+  .single-product
+    .variations_form
 
+      .cfvsw-swatches-container
+        display: flex
+        flex-flow: column nowrap
+        width: 100%
+        
+      .cfvsw-label-option
+        padding: .7em
 
 /* .
 /* .
