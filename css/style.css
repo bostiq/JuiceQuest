@@ -1078,8 +1078,10 @@ footer.et-l.et-l--footer .et_pb_section_0_tb_footer.et_pb_section {
 /*!| === "PRODUCT SOURCE" BADGES ===> | */
 /* |                                  | */
 /* |__________________________________| */
-.et_pb_image.x-sustainable::before, .et_pb_image.x-biodynamic-organic::before,
-i.x-sustainable::before, i.x-biodynamic-organic::before {
+.et_pb_image.x-sustainable::before,
+.et_pb_image.x-biodynamic-organic::before,
+i.x-sustainable::before,
+i.x-biodynamic-organic::before {
   content: "";
   background-size: 32px 32px;
   background-repeat: no-repeat;
@@ -1188,7 +1190,7 @@ i.x-biodynamic-organic::before,
 /* |                                     | */
 /* |_____________________________________| */
 /* ------------------------------- */
-/* BACKGROUND DECORATION */
+/*      BACKGROUND DECORATION */
 /* ------------------------------- */
 .x-wooaccount-page,
 .x-global-footer {
@@ -1517,11 +1519,6 @@ body.woocommerce #page-container .et_pb_section .et_pb_wc_cart_totals_0_tb_body 
   background-color: #245a34;
 }
 .single-product .variations_form .reset_variations {
-  padding: 5px 10px;
-  border: 1px #FF0000 solid;
-  margin-left: 10px;
-  margin-top: 0 !important;
-  font-weight: 700;
   display: none !important;
 }
 
@@ -1540,6 +1537,17 @@ body.woocommerce #page-container .et_pb_section .et_pb_wc_cart_totals_0_tb_body 
     padding: 0.7em;
   }
 }
+/* ------------------------------ */
+/*     DISCOUNT MESSAGE  MODS */
+/* ------------------------------ */
+.wcsatt-options-prompt-text span {
+  display: none;
+}
+
+.wcsatt-options-prompt-text::after {
+  content: "Choose your discount:";
+}
+
 /* . */
 /* . */
 /* . == END SINGLE-PRODUCT PAGE MODS. */
