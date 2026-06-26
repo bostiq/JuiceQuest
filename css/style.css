@@ -977,12 +977,6 @@ footer.et-l.et-l--footer .et_pb_section_0_tb_footer.et_pb_section {
   transition: transform 400ms ease-in-out 0ms;
 }
 
-.et_pb_accordion.x-toggle .et_pb_toggle_open .et_pb_toggle_title::before {
-  transform: rotate(90deg);
-  transform-origin: 10% 160%;
-  transition: transform 400ms ease-in-out 0ms;
-}
-
 /* __________________________________ */
 /* |                                 | */
 /*!| -== DELIVERY CHECK SECTION ==-> | */
@@ -1553,14 +1547,6 @@ body.woocommerce #page-container .et_pb_section .et_pb_wc_cart_totals_0_tb_body 
 /* . == END SINGLE-PRODUCT PAGE MODS. */
 /* . */
 /* . ################################ */
-.wcsatt-options-prompt-text span {
-  display: none;
-}
-
-.wcsatt-options-prompt-text::after {
-  content: "Choose your discount:";
-}
-
 /* =============================== */
 /* |˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙ */
 /*!| ===    GLOBAL FOOTER    ==>  */
