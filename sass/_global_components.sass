@@ -26,7 +26,8 @@
 /* |__________________________________|
 
 @media screen and (max-width: 980px)
-  .et_fixed_nav #main-header, #main-header #mobile_menu
+  .et_fixed_nav #main-header,
+  #main-header #mobile_menu
     background-color: color.adjust($white, $alpha: -.1 )
     position: fixed
 
@@ -34,7 +35,7 @@
   // .product-template-default #main-header, .woocommerce-checkout #main-header,
   // .woocommerce-cart #main-header, .woocommerce-account #main-header
   .product-template-default #main-header  
-    background-color: $hunter-green
+    // background-color: $hunter-green
 
   .product-template-default .et-fixed-header
     &#main-header
@@ -52,31 +53,31 @@
  * SINGLE PRODUCT ONLY
 
 @media screen and (max-width: 980px)
-  .product-template-default .et_fixed_nav #main-header,
+  // .product-template-default .et_fixed_nav #main-header,
   .product-template-default #main-header #mobile_menu
     background-color: $white
     position: fixed
 
-@media only screen and (min-width: 980px)
-  .product-template-default #main-header
-    background-color: $white
+// @media only screen and (min-width: 980px)
+  // .product-template-default #main-header
+    // background-color: $white
 
-    ul#top-menu
+    // ul#top-menu
         // background-color: $white
-        li, a
-          color: $hunter-green
+        // li, a
+          // color: $hunter-green
 
-  .product-template-default .et-fixed-header
-    &#main-header
-      background-color: $white
+  // .product-template-default .et-fixed-header
+  //   &#main-header
+      // background-color: $white
 
-      ul#top-menu
-        background-color: $white
-        li, a
-          color: $hunter-green !important
+      // ul#top-menu
+        // background-color: $white
+        // li, a
+          // color: $hunter-green !important
 
-    .et-search-form
-      background-color: $white
+    // .et-search-form
+      // background-color: $white
 
 /* ____________________________________
 /* |                                  |
@@ -266,7 +267,8 @@
 
 .et_pb_accordion.x-toggle
   .et_pb_toggle_title
-    margin-left: 5%
+    margin-left: 2%
+    text-indent: 16px hanging
 
 .et_pb_accordion.x-toggle,
 .et_pb_accordion.x-toggle .et_pb_toggle_open,
@@ -389,7 +391,10 @@
 
 
 @media (width > 980px)
-  .post-template-default.single-post, .page-template-default, .archive
+  .post-template-default.single-post,
+  .page-template-default,
+  .product-template-default,
+  .archive
     .et-fixed-header
       img#logo
         content: url("/../../../../wp-content/uploads/2025/07/JQ-logo-no-arch-2024-white-w300.png")

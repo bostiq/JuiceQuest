@@ -128,15 +128,13 @@
 /*!|  ===    JUMPING HEADER FIX    ==->  | */
 /* |                                     | */
 /* |_____________________________________| */
-#page-container,
-.x-sec.et_pb_section_first.et_pb_section,
-.et_pb_section:nth-child(1) {
+.page-template-default .x-sec.et_pb_section_first.et_pb_section,
+.page-template-default .et_pb_section:nth-child(1) {
   padding-top: 173px !important;
 }
 @media screen and (max-width: 480px) {
-  #page-container,
-  .x-sec.et_pb_section_first.et_pb_section,
-  .et_pb_section:nth-child(1) {
+  .page-template-default .x-sec.et_pb_section_first.et_pb_section,
+  .page-template-default .et_pb_section:nth-child(1) {
     padding-top: 110px !important;
   }
 }
@@ -746,15 +744,13 @@ footer.et-l.et-l--footer .et_pb_section_0_tb_footer.et_pb_section {
 /* |                                  | */
 /* |__________________________________| */
 @media screen and (max-width: 980px) {
-  .et_fixed_nav #main-header, #main-header #mobile_menu {
+  .et_fixed_nav #main-header,
+  #main-header #mobile_menu {
     background-color: rgba(255, 255, 255, 0.9);
     position: fixed;
   }
 }
 @media only screen and (min-width: 980px) {
-  .product-template-default #main-header {
-    background-color: #245a34;
-  }
   .product-template-default .et-fixed-header#main-header {
     background-color: #245a34;
   }
@@ -770,30 +766,9 @@ footer.et-l.et-l--footer .et_pb_section_0_tb_footer.et_pb_section {
  * * WHITE BACKGROUND HEADER
  * * SINGLE PRODUCT ONLY */
 @media screen and (max-width: 980px) {
-  .product-template-default .et_fixed_nav #main-header,
   .product-template-default #main-header #mobile_menu {
     background-color: #ffffff;
     position: fixed;
-  }
-}
-@media only screen and (min-width: 980px) {
-  .product-template-default #main-header {
-    background-color: #ffffff;
-  }
-  .product-template-default #main-header ul#top-menu li, .product-template-default #main-header ul#top-menu a {
-    color: #245a34;
-  }
-  .product-template-default .et-fixed-header#main-header {
-    background-color: #ffffff;
-  }
-  .product-template-default .et-fixed-header#main-header ul#top-menu {
-    background-color: #ffffff;
-  }
-  .product-template-default .et-fixed-header#main-header ul#top-menu li, .product-template-default .et-fixed-header#main-header ul#top-menu a {
-    color: #245a34 !important;
-  }
-  .product-template-default .et-fixed-header .et-search-form {
-    background-color: #ffffff;
   }
 }
 /* ____________________________________ */
@@ -962,7 +937,8 @@ footer.et-l.et-l--footer .et_pb_section_0_tb_footer.et_pb_section {
 /* |                        | */
 /* |________________________| */
 .et_pb_accordion.x-toggle .et_pb_toggle_title {
-  margin-left: 5%;
+  margin-left: 2%;
+  text-indent: 16px hanging;
 }
 
 .et_pb_accordion.x-toggle > .et_pb_toggle_title::before,
@@ -1071,7 +1047,10 @@ footer.et-l.et-l--footer .et_pb_section_0_tb_footer.et_pb_section {
  * *  content: url("/../../../../wp-content/uploads/2025/05/JQ_Logo_green_half_moon_w300.png");
  * *} */
 @media (width > 980px) {
-  .post-template-default.single-post .et-fixed-header img#logo, .page-template-default .et-fixed-header img#logo, .archive .et-fixed-header img#logo {
+  .post-template-default.single-post .et-fixed-header img#logo,
+  .page-template-default .et-fixed-header img#logo,
+  .product-template-default .et-fixed-header img#logo,
+  .archive .et-fixed-header img#logo {
     content: url("/../../../../wp-content/uploads/2025/07/JQ-logo-no-arch-2024-white-w300.png");
   }
 }
@@ -1498,6 +1477,18 @@ body.woocommerce #page-container .et_pb_section .et_pb_wc_cart_totals_0_tb_body 
 /*! --== SINGLE-PRODUCT PAGE LAYOUTS ==-- */
 /* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙ */
 /* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙ */
+/* _________________________________________ */
+/* |                                       | */
+/*!| ===   TOP PADDING CORRECTION   ==->   | */
+/* |                                       | */
+/* |_______________________________________| */
+@media screen and (max-width: 480px) {
+  .product-template-default .x-sec.et_pb_section_first.et_pb_section,
+  .product-template-default .et_pb_section:nth-child(2) {
+    padding-top: 0 !important;
+  }
+}
+
 /* _________________________________________ */
 /* |                                       | */
 /*!| ===  SINGLE-PRODUCT PAGE INFO  ==->   | */
