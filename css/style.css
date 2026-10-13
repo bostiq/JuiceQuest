@@ -1750,13 +1750,13 @@ footer .x-logo-footer .et_pb_image_wrap {
   box-shadow: 0 0 0 2px #ffffff inset, 0 0 0 4px #245a34 inset;
 }
 
-#omnisend-form-689c3a455793905f88b7c7df-submit-form .omnisend-form-689c3a455793905f88b7c7df-section-689c3708471a523c31f81d55,
-#omnisend-form-689c3a455793905f88b7c7df-submit-form omnisend-form-689c3a455793905f88b7c7df-field-container-62a3147776d81914aa87ed98,
-#omnisend-form-689c3a455793905f88b7c7df-submit-form #omnisend-form-689c3a455793905f88b7c7df-field-62a3147776d81914aa87ed98 {
+#omnisend-form-689c3a455793905f88b7c7df-step-0-submit-form .omnisend-form-689c3a455793905f88b7c7df-section-689c3708471a523c31f81d55,
+#omnisend-form-689c3a455793905f88b7c7df-step-0-submit-form omnisend-form-689c3a455793905f88b7c7df-field-container-62a3147776d81914aa87ed98,
+#omnisend-form-689c3a455793905f88b7c7df-step-0-submit-form #omnisend-form-689c3a455793905f88b7c7df-field-62a3147776d81914aa87ed98 {
   padding: 0;
 }
 
-#omnisend-form-689c3a455793905f88b7c7df-submit-form .omnisend-form-689c3a455793905f88b7c7df-action-container-627932485028ebd8c6660c51 {
+#omnisend-form-689c3a455793905f88b7c7df-step-0-submit-form .omnisend-form-689c3a455793905f88b7c7df-action-container-627932485028ebd8c6660c51 {
   position: absolute;
   right: 0;
   padding-top: 0;
@@ -1764,14 +1764,14 @@ footer .x-logo-footer .et_pb_image_wrap {
   padding-left: 0;
   padding-right: 0;
 }
-#omnisend-form-689c3a455793905f88b7c7df-submit-form button#omnisend-form-689c3a455793905f88b7c7df-action-627932485028ebd8c6660c51.omnisend-form-689c3a455793905f88b7c7df-action-627932485028ebd8c6660c51 {
+#omnisend-form-689c3a455793905f88b7c7df-step-0-submit-form button#omnisend-form-689c3a455793905f88b7c7df-action-627932485028ebd8c6660c51.omnisend-form-689c3a455793905f88b7c7df-action-627932485028ebd8c6660c51 {
   font-weight: bold;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   padding: 16px 22px;
   text-transform: uppercase;
   transition: background-color 300ms ease-in-out, font-weight 300ms ease-in-out, color 300ms ease-in-out;
 }
-#omnisend-form-689c3a455793905f88b7c7df-submit-form button#omnisend-form-689c3a455793905f88b7c7df-action-627932485028ebd8c6660c51.omnisend-form-689c3a455793905f88b7c7df-action-627932485028ebd8c6660c51:hover {
+#omnisend-form-689c3a455793905f88b7c7df-step-0-submit-form button#omnisend-form-689c3a455793905f88b7c7df-action-627932485028ebd8c6660c51.omnisend-form-689c3a455793905f88b7c7df-action-627932485028ebd8c6660c51:hover {
   background-color: #ea9940;
   color: #ffffff;
   transition: background-color 300ms ease-in-out, font-weight 300ms ease-in-out, color 300ms ease-in-out;
