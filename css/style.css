@@ -128,13 +128,13 @@
 /*!|  ===    JUMPING HEADER FIX    ==->  | */
 /* |                                     | */
 /* |_____________________________________| */
-.page-template-default .x-sec.et_pb_section_first.et_pb_section,
-.page-template-default .et_pb_section:nth-child(1) {
+.et-l:nth-child(1) .x-sec.et_pb_section_first.et_pb_section,
+.et-l:nth-child(1) .et_pb_section:nth-child(1) {
   padding-top: 173px !important;
 }
 @media screen and (max-width: 480px) {
-  .page-template-default .x-sec.et_pb_section_first.et_pb_section,
-  .page-template-default .et_pb_section:nth-child(1) {
+  .et-l:nth-child(1) .x-sec.et_pb_section_first.et_pb_section,
+  .et-l:nth-child(1) .et_pb_section:nth-child(1) {
     padding-top: 110px !important;
   }
 }
