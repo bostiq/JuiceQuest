@@ -128,17 +128,6 @@
 /*!|  ===    JUMPING HEADER FIX    ==->  | */
 /* |                                     | */
 /* |_____________________________________| */
-.et-l:nth-child(1) .x-sec.et_pb_section_first.et_pb_section,
-.et-l:nth-child(1) .et_pb_section:nth-child(1) {
-  padding-top: 173px !important;
-}
-@media screen and (max-width: 480px) {
-  .et-l:nth-child(1) .x-sec.et_pb_section_first.et_pb_section,
-  .et-l:nth-child(1) .et_pb_section:nth-child(1) {
-    padding-top: 110px !important;
-  }
-}
-
 header#main-header {
   top: 35.25px;
 }
