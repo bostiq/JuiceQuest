@@ -718,6 +718,18 @@ footer.et-l.et-l--footer .et_pb_section_0_tb_footer.et_pb_section {
 /*! -= GLOBAL COMPONENTS =- */
 /* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙ */
 /* ˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙ */
+/* _______________________________________ */
+/* |                                     | */
+/*!|   -==  ACCOUNT MENU HEADER   ==->   | */
+/* |                                     | */
+/* |_____________________________________| */
+.et-menu-nav .x-account .fa-user::before {
+  font-size: 28px;
+  position: absolute;
+  left: -15px;
+  top: 1px;
+}
+
 /* _____________________________________ */
 /* |                                   | */
 /*!|   -==     MENU HEADER      ==->   | */
